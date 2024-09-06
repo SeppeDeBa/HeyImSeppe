@@ -18,7 +18,7 @@ body{
     padding: 20px 10%;
     background: #aa5259;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Ensures logo and navbar are spaced apart */
     align-items: center;
     z-index: 100;
 }
@@ -29,8 +29,12 @@ body{
     text-decoration: none;
     font-weight: 600;
     transition: 0.3s;
+    flex-shrink: 0;
 }
 
+.navbar{
+    display: flex;
+}
 .navbar a {
     font-size: 18px;
     color:#2e88ad;
