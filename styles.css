@@ -17,4 +17,29 @@ body{
     width: 100%;
     padding: 20px 10%;
     background: #aa5259;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 25px;
+    color:#2e88ad;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.navbar a {
+    font-size: 18px;
+    color:#2e88ad;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+}
+
+.navbar a:hover {
+    color:#60d9d0;
+
 }
