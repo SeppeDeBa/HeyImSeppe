@@ -23,7 +23,8 @@ body{
 }
 
 .logo{
-    font-size: 25px;
+
+    font-size: 35px;
     color:#3c3b60;
     text-decoration: none;
     font-weight: 600;
@@ -54,7 +55,7 @@ body{
 
 .sub-title
 {
-    top: 15px;
+    top: 40px;
     display: flex;
     font-size: 60px;
     font-weight: 600;
