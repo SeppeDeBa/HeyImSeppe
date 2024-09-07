@@ -6,7 +6,7 @@
     font-family: 'Poppins', sans-serif;
 }
 body{
-    background: #301934;
+    background: #3c3b60;
 }
 .header
 {
@@ -15,7 +15,7 @@ body{
     left: 0;
     width: 100%;
     padding: 20px 10%;
-    background: #aa5259;
+    background: #e0906e;
     display: flex;
     justify-content: space-between; /* Ensures logo and navbar are spaced apart */
     align-items: center;
@@ -24,7 +24,7 @@ body{
 
 .logo{
     font-size: 25px;
-    color:#2e88ad;
+    color:#3c3b60;
     text-decoration: none;
     font-weight: 600;
     transition: 0.3s;
@@ -36,13 +36,13 @@ body{
 }
 .navbar a {
     font-size: 18px;
-    color:#2e88ad;
+    color:#3c3b60;
     text-decoration: none;
     font-weight: 500;
     margin-left: 35px;
 }
 
 .navbar a:hover {
-    color:#60d9d0;
+    color:#9896ce;
 
 }
