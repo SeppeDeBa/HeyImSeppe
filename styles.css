@@ -54,6 +54,7 @@ body{
 
 .sub-title
 {
+    display: flex;
     font-size: 60px;
     font-weight: 600;
     color: #fff;
