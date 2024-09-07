@@ -116,7 +116,7 @@ justify-content: flex-end;
 flex-direction: column;
 padding: 20px 40px;
 text-align: center;
-
+}
 .layer-content {
     position: absolute;
     bottom: 20px;
