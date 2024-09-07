@@ -132,7 +132,7 @@ text-align: center;
     border-radius: 5px;
     display: inline-block; 
     box-shadow: 2px 2px 8px rgba(1,1,1,0.2);
-    margin-bottom: 10px;
+    margin-bottom: 3px;
 }
 
 .layer p{
@@ -142,7 +142,7 @@ text-align: center;
     border-radius: 5px;
     display: inline-block; 
     box-shadow: 2px 2px 8px rgba(1,1,1,0.2);
-    margin-bottom: 5px;
+    margin-bottom: 3px;
 }
 .layer a{
     background-color: rgba(255, 255, 255, 0.6); 
@@ -151,5 +151,5 @@ text-align: center;
     border-radius: 5px;
     display: inline-block; 
     box-shadow: 2px 2px 8px rgba(1,1,1,0.2);
-    margin-bottom: 5px;
+    margin-bottom: 2px;
 }
