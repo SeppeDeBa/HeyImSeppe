@@ -112,7 +112,7 @@ body{
     box-sizing: border-box;
     position: absolute;
     background: rgba(0,0,0,0.5);
-    bottom: -220px;
+    bottom: -180px;
     color: white;
 }
 .intro h1 {
