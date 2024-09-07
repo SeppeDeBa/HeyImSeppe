@@ -114,12 +114,12 @@ overflow: hidden;
 align-items: center;
 justify-content: flex-end;
 flex-direction: column;
-padding: 20px 15px;
+padding: 10px 15px;
 text-align: center;
 }
 .layer-content {
     position: absolute;
-    bottom: 10px;
+    bottom: 5px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -141,7 +141,6 @@ text-align: center;
     display: inline-block; 
     box-shadow: 2px 2px 8px rgba(1,1,1,0.2);
     max-width: 100%;
-    margin: 0;
     /* margin-bottom: 3px; */
 }
 .layer-content a{
@@ -150,6 +149,5 @@ text-align: center;
     border-radius: 5px;
     display: inline-block; 
     box-shadow: 2px 2px 8px rgba(1,1,1,0.2);
-    margin: 0; 
     /* margin-bottom: 2px; */
 }
