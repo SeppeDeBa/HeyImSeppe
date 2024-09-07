@@ -108,24 +108,28 @@ body{
 .intro{
     height: 0px;
     width: 100%;
-    padding: 6px;
+    padding: 0 6px;
     box-sizing: border-box;
     position: absolute;
     background: rgba(0,0,0,0.5);
-    bottom: -180px;
+    bottom: 0;
     color: white;
+    overflow: hidden;
+    transition: height 0.4s ease-in-out, padding 0.4s ease-in-out;
 }
-.intro h1 {
-    margin: 10px;
-    font-size: 40px;
+.intro h1 .intro p{
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    /* margin: 10px;
+    font-size: 40px; */
 }
 
-.intro p{
+/* .intro p{
 font-size: 20px;
 margin: 20px;
 visibility: hidden;
 opacity: 0;
-}
+} */
 
 .intro span{
     font-size: bold;
@@ -135,11 +139,11 @@ opacity: 0;
     cursor:pointer;
 }
 .project:hover .intro{
-    height:220px;
-    bottom: 0px;
+    height:100%;
+    bottom: 20px 6px;
     background:black;
 }
-.project:hover .p{
+.project:hover .p, .project:hover h1{
 opacity: 1;
 visibility: visible;
 }
