@@ -46,6 +46,20 @@ body{
     color:#9896ce;
 
 }
+
+.container
+{
+    padding: 10px 10%;
+}
+
+.sub-title
+{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+
+
 #portfolio{
     padding: 50px 0;
 
