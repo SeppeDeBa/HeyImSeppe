@@ -36,7 +36,7 @@ body{
     display: flex;
 }
 .navbar a {
-    font-size: 18px;
+    font-size: 23px;
     color:#3c3b60;
     text-decoration: none;
     font-weight: 500;
@@ -55,8 +55,10 @@ body{
 
 .sub-title
 {
-    top: 40px;
+    top: 10px;
+    bottom: 30px;
     display: flex;
+    
     font-size: 60px;
     font-weight: 600;
     color: #fff;
