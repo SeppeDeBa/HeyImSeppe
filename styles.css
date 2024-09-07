@@ -112,9 +112,9 @@ left: 0;
 bottom: 0;
 overflow: hidden;
 align-items: center;
-justify-content: center;
+justify-content: flex-end;
 flex-direction: column;
-padding: 0 40px;
+padding: 20px 40px;
 text-align: center;
 
 
