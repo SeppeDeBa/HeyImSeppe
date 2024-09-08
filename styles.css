@@ -106,7 +106,7 @@ body {
 
 .intro {
     height: auto;
-    min-height: 50px;
+    min-height: 20px;
     width: 100%;
     padding: 10px 6px;
     box-sizing: border-box;
@@ -121,7 +121,7 @@ body {
 .intro h1 {
     opacity: 1; /* Initially invisible */
     transform: translateY(0px); /* Slight translation for sliding effect */
-    transition: none; /* Smooth transition */
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
     margin: 10px, 0;
 }
 
