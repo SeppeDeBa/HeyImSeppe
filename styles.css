@@ -117,7 +117,14 @@ body {
     transition: height 0.4s ease-in-out, padding 0.4s ease-in-out;
 }
 
-.intro h1, .intro p {
+.intro h1 {
+    opacity: 1; /* Initially invisible */
+    transform: translateY(20px); /* Slight translation for sliding effect */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition */
+    margin: 1
+}
+
+.intro p {
     opacity: 0; /* Initially invisible */
     transform: translateY(20px); /* Slight translation for sliding effect */
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition */
