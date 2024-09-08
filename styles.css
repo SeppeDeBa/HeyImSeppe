@@ -22,8 +22,9 @@ body {
 }
 
 .about-me img {
-    width: 40%; 
+    width: 20%; 
     border-radius: 10px; 
+    padding-left: 25%;
 }
 
 .about-me-text {
