@@ -21,6 +21,14 @@ body {
     margin: 0px 20px;
 }
 
+.about-me-text h2{
+    color: #e0906e;
+}
+
+.about-me-text p{
+    color: #c2714f;
+}
+
 .about-image img{
     max-width: 30%;
     height: auto;
