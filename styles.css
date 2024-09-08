@@ -10,7 +10,7 @@ body {
 }
 
 .about-me {
-    padding: 10px 10%;
+    padding-left: 15%;
     display: flex;
     justify-content: space-between;
     margin: 50px auto;
