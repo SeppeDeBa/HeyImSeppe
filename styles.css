@@ -84,6 +84,7 @@ body {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 40px;
     margin-top: 15px;
+    max-width: 75%;
 }
 
 @media (max-width: 1024px) {
