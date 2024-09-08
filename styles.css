@@ -74,7 +74,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 40px;
-    margin-top: 50px;
+    margin-top: 15px;
 }
 
 @media (max-width: 1024px) {
@@ -105,9 +105,10 @@ body {
 }
 
 .intro {
-    height: 0;
+    height: auto;
+    min-height: 50px;
     width: 100%;
-    padding: 0 6px;
+    padding: 10px 6px;
     box-sizing: border-box;
     position: absolute;
     background: rgba(0, 0, 0, 0.8); /* Darker background for contrast */
@@ -120,25 +121,25 @@ body {
 .intro h1 {
     opacity: 1; /* Initially invisible */
     transform: translateY(0px); /* Slight translation for sliding effect */
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition */
-    margin: 1
+    transition: none; /* Smooth transition */
+    margin: 10px, 0;
 }
 
 .intro p {
     opacity: 0; /* Initially invisible */
     transform: translateY(20px); /* Slight translation for sliding effect */
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition */
-    margin: 10px 0;
+   /* margin: 10px 0; */
 }
 
 /* When hovering on the project, show the intro box fully */
 .project:hover .intro {
     height: 100%; /* Allow the box to fully cover the project image */
-    padding: 10px 6px; /* Add padding to make text readable */
+    padding: 20px 6px; /* Add padding to make text readable */
 }
 
 /* Show the text inside the intro */
-.project:hover .intro h1, 
+
 .project:hover .intro p {
     opacity: 1; /* Make text visible */
     transform: translateY(0); /* Bring text back into place */
