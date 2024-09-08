@@ -16,6 +16,7 @@ body {
     margin: 50px auto;
 }
 
+
 .about-me-text {
     max-width: 45%;
     margin: 0px 20px;
@@ -23,18 +24,20 @@ body {
 
 .about-me-text h2{
     color: #e0906e;
+    font-size: 60px;
+    font-weight: 600;
+    text-align: left;
 }
 
 .about-me-text p{
     color: #c2714f;
+    font-size: 45px;
 }
 
 .about-image img{
     max-width: 30%;
     height: auto;
     border-radius: 10px;
-   
-
 }
 
 
