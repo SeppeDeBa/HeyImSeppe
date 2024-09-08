@@ -77,7 +77,6 @@ body {
     padding-left: 5%;
 }
 
-
 #portfolio{
     padding: 50px 0;
     margin-top: 30px;
@@ -119,10 +118,10 @@ body {
 }
 
 .intro {
-    height: 15%;
-    min-height: 15px;
+    height: 16%;
+    min-height: 18px;
     width: 100%;
-    padding: 10px 12px;
+    padding: 11px 13px;
     box-sizing: border-box;
     position: absolute;
     background: rgba(0, 0, 0, 0.8); /* Darker background for contrast */
