@@ -10,12 +10,44 @@ body {
 }
 
 
+.about-me {
+    background: #f4f4f4; 
+    padding: 50px 10%;
+}
+
+.about-me-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.about-me img {
+    width: 40%; 
+    border-radius: 10px; 
+}
+
+.about-me-text {
+    flex: 1; 
+}
+
+.about-me-text h2 {
+    font-size: 36px;
+    color: #3c3b60; 
+    margin-bottom: 20px;
+}
+
+.about-me-text p {
+    font-size: 18px;
+    color: #333; 
+    line-height: 1.6;
+}
+
 
 .content {
     display: block;
     flex-direction: column;
     align-items: center;
-    padding-top: 100px; /* This keeps space for the fixed navbar */
+    padding-top: 100px; 
     width: 100%;
     box-sizing: border-box;
 }
@@ -28,7 +60,7 @@ body {
     padding: 20px 10%;
     background: #e0906e;
     display: flex;
-    justify-content: space-between; /* Ensures logo and navbar are spaced apart */
+    justify-content: space-between; 
     align-items: center;
     z-index: 100;
 }
@@ -92,13 +124,13 @@ body {
 
 @media (max-width: 1024px) {
     .projectList {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+        grid-template-columns: repeat(2, 1fr); 
     }
 }
 
 @media (max-width: 768px) {
     .projectList {
-        grid-template-columns: 1fr; /* 1 column for small screens */
+        grid-template-columns: 1fr; 
     }
 }
 
@@ -124,7 +156,7 @@ body {
     padding: 11px 13px;
     box-sizing: border-box;
     position: absolute;
-    background: rgba(0, 0, 0, 0.8); /* Darker background for contrast */
+    background: rgba(0, 0, 0, 0.8); 
     bottom: 0;
     color: white;
     overflow: hidden;
@@ -132,30 +164,30 @@ body {
 }
 
 .intro h1 {
-    opacity: 1; /* Initially invisible */
-    transform: translateY(0px); /* Slight translation for sliding effect */
-    transition: transform 0.3s ease-in-out; /* Smooth transition */
+    opacity: 1; 
+    transform: translateY(0px); 
+    transition: transform 0.3s ease-in-out; 
     margin: 10px, 0;
 }
 
 .intro p {
-    opacity: 0; /* Initially invisible */
-    transform: translateY(20px); /* Slight translation for sliding effect */
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition */
-   /* margin: 10px 0; */
+    opacity: 0; 
+    transform: translateY(20px); 
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; 
+
 }
 
-/* When hovering on the project, show the intro box fully */
+
 .project:hover .intro {
-    height: 100%; /* Allow the box to fully cover the project image */
-    padding: 20px 6px; /* Add padding to make text readable */
+    height: 100%; 
+    padding: 20px 6px; 
 }
 
-/* Show the text inside the intro */
+
 
 .project:hover .intro p {
-    opacity: 1; /* Make text visible */
-    transform: translateY(0); /* Bring text back into place */
+    opacity: 1; 
+    transform: translateY(0); 
 }
 
 .layer {
