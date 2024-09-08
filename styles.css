@@ -9,7 +9,6 @@ body {
     background: #3c3b60;
 }
 
-
 .about-me {
     padding: 10px 10%;
     display: flex;
@@ -85,6 +84,10 @@ body {
     align-items: center;
     padding: 10px 10%;
     margin-top: 50px;
+}
+
+.boldened {
+    font-weight: 600;
 }
 
 .sub-title {
