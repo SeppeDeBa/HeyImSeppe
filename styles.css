@@ -11,39 +11,23 @@ body {
 
 
 .about-me {
-    background: #f4f4f4; 
-    padding: 50px 10%;
-}
-
-.about-me-content {
+    padding: 10px 10%;
     display: flex;
-    align-items: center;
-    gap: 20px;
-    object-fit: cover;
-}
-
-.about-me img {
-    width: 20%; 
-    border-radius: 10px; 
-    padding-left: 25%;
+    justify-content: space-between;
+    margin: 50px auto;
 }
 
 .about-me-text {
-    flex: 1; 
-
+    max-width: 45%;
+    margin: 0px 20px;
 }
 
-.about-me-text h2 {
-    font-size: 36px;
-    color: #3c3b60; 
-    margin-bottom: 20px;
-}
-
-.about-me-text p {
-    font-size: 18px;
-    color: #333; 
-    line-height: 1.6;
-    word-wrap: break-word;
+.about-image img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px, 4px, 4px, rgba(0, 0, 0, 0.3);
+    
 }
 
 
