@@ -9,8 +9,10 @@ body {
     background: #3c3b60;
 }
 
+
+
 .content {
-    display: flex;
+    display: block;
     flex-direction: column;
     align-items: center;
     padding-top: 100px; /* This keeps space for the fixed navbar */
@@ -67,16 +69,18 @@ body {
 
 .sub-title {
     margin-top: 30px;
-    display: flex;
+    /* display: flex; */
     font-size: 60px;
     font-weight: 600;
     color: #fff;
+    text-align: left;
+    padding-left: 5%;
 }
 
 
 #portfolio{
     padding: 50px 0;
-
+    margin-top: 30px;
 }
 
 .projectList {
