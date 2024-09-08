@@ -105,10 +105,10 @@ body {
 }
 
 .intro {
-    height: 30px;
+    height: 40px;
     min-height: 15px;
     width: 100%;
-    padding: 10px 8px;
+    padding: 10px 12px;
     box-sizing: border-box;
     position: absolute;
     background: rgba(0, 0, 0, 0.8); /* Darker background for contrast */
