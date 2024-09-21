@@ -78,6 +78,19 @@ body {
     transition: 0.3s;
     flex-shrink: 0;
 }
+@media (max-width: 768px) {
+    .logo{
+        font-size: 16px;
+        font-weight: 350;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar a {
+        font-size: 12px;
+        font-weight: 250;
+    }
+}
 
 .navbar {
     display: flex;
