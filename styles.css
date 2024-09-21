@@ -24,6 +24,10 @@ body {
     margin: 0px 20px;
 }
 
+.about-me-bottom-text{
+    max-width: 90%;
+    margin: 0px 20px;
+}
 .about-me-text h2{
     color: #e0906e;
     font-size: 50px;
