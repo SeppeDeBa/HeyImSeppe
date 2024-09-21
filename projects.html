@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seppe De Baere Portfolio website</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
 </head>
 
 
@@ -37,7 +36,16 @@
             I adore learning new things and am always excited for new challenges. <br>
             I'm goal-oriented and focus on always improving, and my past in OT has given me many tools for solving problems.
             Also an HTML newbie!
+            
+            
             </p>
+
+            <!-- <p> I'm a gameplay programmer and ex occupational therapist(OT)! <br>
+                My favorite aspect about programming is learning new things. I'm always enthousiastic to try out new patterns and challenges.<br>
+                I find it important to communicate well, write efficient code, apply experience as you go and keep code organised.<br>
+                Due to my previous background in OT I've gotten good at finding flexible and creative solutions, and I love mixing these with the logics and efficiency of gameplay programming. 
+            </p> -->
+
         </div>
         <div class = "about-image">
             <img src = "/HeyImSeppe/images/MePNG2.png" alt = "PictureOfMe">
@@ -51,7 +59,8 @@
     <div id="portfolio">
         <div class ="container">
             <div class = "projectList">
-                <a href="javascript:void(0)" onclick="openPopup('Footie Frenzy', '[GROUP PROJECT] An intergalactic war fought through a soccer match!', ['images/FootieFrenzy1.jpg', 'images/FootieFrenzy2.jpg'])">
+
+                <a href = "/HeyImSeppe/footiefrenzy.html">
                     <div class="project">
                         <img src = "/HeyImSeppe/images/FootieFrenzy.jpg" alt = "FootieFrenzy">
                         <div class="intro">
@@ -111,28 +120,6 @@
 
 
     </div>
-
-    
-    <div id="popup" class="popup-container">
-        <div class="popup-content">
-            <!-- Left part with images -->
-            <div class="popup-images">
-                <img id="popup-image" src="" alt="Project Image">
-                <button class="arrow left-arrow" onclick="prevImage()">&#9664;</button>
-                <button class="arrow right-arrow" onclick="nextImage()">&#9654;</button>
-            </div>
-
-            <!-- Right part with text -->
-            <div class="popup-text">
-                <h2 id="popup-title">Project Title</h2>
-                <p id="popup-info">Project information goes here...</p>
-            </div>
-
-            <!-- Close button -->
-            <span class="close-btn" onclick="closePopup()">&times;</span>
-        </div>
-    </div>
-
 
 
     <div class = "about-me">
