@@ -35,7 +35,7 @@ body {
     text-align: left;
 }
 
-.about-me-text p{
+.about-me-text p, .about-me-bottom-text p{
     color: #c2714f;
     font-size: 20px;
 }
