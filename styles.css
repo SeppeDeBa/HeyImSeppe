@@ -277,3 +277,40 @@ body {
     margin-top: -100px ;
     clear: both;
 }
+
+
+.projectPageContainer{
+    display: flex;
+    
+    justify-content: flex-start; 
+    align-items: stretch; 
+    /* flex-flow: column nowrap; */ 
+    flex-direction: column; 
+    flex-wrap: nowrap; 
+    align-content: flex-start;
+
+    background-color: #bbdefb;
+    height: 100%;
+    padding: 15px;
+    gap: 5px;
+}
+
+.projectAboutInfoContainer
+{
+    display:flex;
+    justify-content: center;
+}
+
+.projectInfo{
+    flex-grow: 1;
+    align-self: auto;
+}
+
+.projectAbout
+{
+    flex-grow: 1;
+}
+
+
+
+
