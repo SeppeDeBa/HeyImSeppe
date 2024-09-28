@@ -293,11 +293,11 @@ body {
 .projectPageDividerHorizontal{
     display: flex;
     justify-content: space-between;
-    gap: 5%;
+    gap: 3%;
     align-items: center;
 }
 .projectPageDividerHorizontal img{
-    width:60%;
+    width:55%;
     height: max-content;
 }
 
