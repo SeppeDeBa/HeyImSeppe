@@ -304,12 +304,16 @@ body {
 .projectInfo{
     width:80%;
 }
+.projectInfo h3, .projectAbout h3{
+    font-weight: 350;
+}
 
 .projectAboutInfoContainer
 {
     display:flex;
     flex-direction: column;
     justify-content: left;
+    gap: 8px;
 }
 
 .projectAboutInfoContainer .projectInfo, 
@@ -338,6 +342,10 @@ body {
     .projectInfo {
         font-size: 5px; 
     }
+}
+
+.ProjectPageSubtitle{
+    
 }
 
 

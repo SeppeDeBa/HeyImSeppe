@@ -30,11 +30,11 @@
         <img src = "/HeyImSeppe/images/FootieFrenzy.jpg" alt = "FootieFrenzy">
         <div class = "projectAboutInfoContainer">
             <div class = "projectInfo">
-                <h1>Project Info</h1>
-                <h3>Role: Gameplay Programmer<br>
-                Size: 4 people<br>
-                Time span: 5 months<br>
-                Engine: UE 5
+                <h1>Footie Frenzy</h1>
+                <h3><strong>Role:</strong></strong> Gameplay Programmer<br>
+                <strong>Size:</strong> 4 people<br>
+                <strong>Time span:</strong> 5 months<br>
+                <strong>Engine:</strong> UE 5
                 </h3>
             </div>
             <div class = "projectAbout">
@@ -47,6 +47,54 @@
             </div>
         </div>
     </div>
+    <div class = "ProjectPageSubtitle">
+        <h1>Introduction:</h1>
+        <h3> 
+            Footie Frenzy was a group project made by me, <a href = "https://www.nigelhuens.com/">Nigel Huens</a>(programmer), <a href = "https://www.artstation.com/szpika/albums/3655446">Alicja Pawelec</a>(technical artist) and Remi Pallemaerts(artist). <br>
+            In the period of 1 semester we had weekly meetings with 2 supervisors planning the prototyping, production and polish of this project.<br>
+            The purpose of this course was to focus on learning to work <strong>interdisciplinary</strong>, go through a <strong>full development cycle</strong>, and learn tools such as <strong>Perforce and HackNPlan</strong>. <br>
+        </h3>
+        <h1>My contributions:</h1>
+        <h2>Core movement, ball shooting, prototyping Unreal</h2> 
+        <h3>
+            One of my biggest roles was creating, testing and tweaking the core movement and kicking system for the game, aswell as prototyping the ability system.<br>
+            I started with testing some values in blueprints, after which I remade them with C++ code. It was important to look deeply into the documentation of UE5 to get the perfect feeling for the 2 types of kicking and the ball physics.<br>
+            It was important to me to make the ability systems usage <strong>expandable and reusable</strong> in case we ever want to add more species to the game.<br>
+        </h3>
+        <h2>Custom controller compatilbe UI:</h2>
+        <h3>The built in UI system for Controllers was deeply failing us, which gave me the <strong>opportunity to dive deeper into the c++ side of UE5 UI</strong><br>
+            I inherited from some base UI elements and combined them with a self made own UI controller, allowing navigation between different elements made by us.<br>
+            Something extremely important throughout this whole element was to make it <strong>easy to use for artists</strong>, which applied to other aspects of the project such as the looks of abilities(example: showing and dissapearing of UFO).
+            This also gave me the chance to look into how Unreal registers controller input and switching their modes between gameplay and UI, aswell as implementing UI only inputMethods to the UI.
+            It was really cool to build this up and could be a further project as I would like to see how the process is to make a UE5 plugin.
+        </h3>
+        <h2>Post goal, Animation implementation and more</h2>
+        <h3>Besides these specific topics there were a lot more opportunities where I got to work closely with the technical artist to make animations transition smoothly, have more UI pop up on for example goals, and make the game clearer for players.
+        Penguins and aliens had the same application of making a system that can easily be added on for their UI, animations and particles.<br>
+        I also love being a part of the <strong>creative process</strong> and I find it important to be critical about the game, whether its fun, and improve teamwork.
+        </h3>
+        <h1>What did I learn?</h1>
+        <h3>1. When working on the programming side, it's important to <strong>think about how artists will use my code and work on the game.</strong><br>
+            &ensp; An example would be to not take control over specific meshes to show up or be hidden, but instead work with an object root system so that the artist can always add/remove things like particles, effects and additional meshes as they please.<br>
+            2. <strong>Documentation is awesome!</strong><br>
+            &ensp; This was my first project using C++ in Unreal, and the documantation can be hard to find sometimes... However it was very fun to try out new things while working on this project. New engines are always fun to learn, and this really showed me both how much you can keep learning an engine, aswell as how I would change certain aspects of the engine if it was my own.<br>
+            3. Knowing what colleagues are doing is the key to a great problem.
+            &ensp; Using HackNPlan has shown me how great it is to plan out a whole production sprint. We had very minimal task blocking as we could work parallel with the artists. Whenever we worked on for example the characters, we could constantly ask them what they need/want. This in turn allowed us to know how to implement things they needed, and more importantly allowed us to communicate on the structure and needs of the topic at hand.<br>
+            4. Break down complex problems into smaller tasks.<br>
+            &ensp; Running into problems such as the UI showed me to not try too much "shotgun programming".<br>
+            I learned to be more confident in what I can do, which in turn taught me to work smarter when doing it.<br>
+            Normally I would try out changings aspects of the code and seeing what works based on my programming knowledge. In this project it was however a great insight to talk to the programming supervisor aswell as my fellow programmer.<br>
+            Relaying how code works and documenting it was of immense value for eachother.
+            This allowed me to also to plan out how I'd make systems expandable and reusable, and refactor after getting feedback from my peers and supervisor.<br>
+        </h3>
+        <h1>Relevant Links</h1>
+        <h3>
+            - <a href = "https://rpallemaerts.itch.io/footie-frenzy-inter-species-invasion">Itch.io </a><br> 
+            - <a href = "https://youtu.be/FBEHT0ulfVU?si=UX5-ifZWBYrlTr2V">Youtube trailer </a><br>
+            - No code snippets as the project is technically owned by HOWEST. Further inquiries and looking into the code can be asked for!
+        </h3>
+    </div>
+
 
 </div>
 
