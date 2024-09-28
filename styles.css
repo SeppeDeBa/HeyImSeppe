@@ -289,11 +289,19 @@ body {
     flex-wrap: nowrap; 
     align-content: flex-start;
 
-    background-color: #bbdefb;
     height: 100%;
-    padding: 15px;
+    padding: 10%;
     gap: 5px;
 }
+.projectPageDividerHorizontal{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    padding: 5%;
+    flex-grow:1;
+    flex-shrink: 1;
+}
+
 
 .projectAboutInfoContainer
 {
