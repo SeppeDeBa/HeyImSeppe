@@ -286,7 +286,7 @@ body {
     /* flex-flow: column nowrap; */ 
 
     height: 100%;
-    width:80%;
+    width: 100%;
     padding: 10%;
     gap: 20px;
 }
@@ -297,13 +297,12 @@ body {
     align-items: center;
 }
 .projectPageDividerHorizontal img{
-    width:50%;
-    height: auto;
+    width:60%;
+    height: max-content;
 }
 
 .projectInfo{
-    width:50%;
-    padding-left: 20px;
+    width:80%;
 }
 
 .projectAboutInfoContainer
@@ -311,12 +310,11 @@ body {
     display:flex;
     flex-direction: column;
     justify-content: left;
-    gap:20px;
 }
 
 .projectAboutInfoContainer .projectInfo, 
 .projectAboutInfoContainer .projectAbout {
-    width: 50%; /* Both sections take up half the width */
+    width: 80%; /* Both sections take up half the width */
 }
 
 .projectAbout
