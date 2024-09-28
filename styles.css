@@ -349,13 +349,13 @@ body {
 }
 
 .ProjectPageSubtitle h1{
-
+    padding-top:30px;
 }
 .ProjectPageSubtitle h2{
-   
+   padding-top:8px;
 }
 .ProjectPageSubtitle h3{
-    font-weight: 350;
+    font-weight: 400;
 }
 
 
