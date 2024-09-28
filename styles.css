@@ -293,6 +293,7 @@ body {
 .projectPageDividerHorizontal{
     display: flex;
     justify-content: space-between;
+    gap: 5%;
     align-items: center;
 }
 .projectPageDividerHorizontal img{
@@ -308,7 +309,8 @@ body {
 .projectAboutInfoContainer
 {
     display:flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: left;
     gap:20px;
 }
 
