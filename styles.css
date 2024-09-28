@@ -345,8 +345,12 @@ body {
 }
 
 .ProjectPageSubtitle{
-    
+
 }
 
+
+.ProjectPageSubtitle h3{
+    font-weight: 350;
+}
 
 
