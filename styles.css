@@ -370,7 +370,7 @@ body {
 }
 .ProjectPageSubtitle h3{
     font-weight: 400;
-    font-size: (0.3rem, 1vw, 2rem);
+    font-size: clamp(0.3rem, 1vw, 2rem);
 }
 
 
