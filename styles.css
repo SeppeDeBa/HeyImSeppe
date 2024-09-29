@@ -304,13 +304,13 @@ body {
 .projectInfo{
     width:80%;
 }
-.projectInfo h3, .projectAbout h1{
-    
-}
-.projectInfo h3, .projectAbout h2{
+.projectAbout h1{
 
 }
-.projectInfo h3, .projectAbout h3{
+.projectAbout h2{
+
+}
+.projectInfo h3{
     font-weight: 350;
 }
 
