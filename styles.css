@@ -287,7 +287,7 @@ body {
 
     height: 100%;
     width: 100%;
-    padding: 10%;
+    padding: 10% 20%;
     gap: 20px;
 }
 .projectPageDividerHorizontal{
@@ -312,6 +312,7 @@ body {
 } */
 .projectInfo h3, .projectAbout h3{
     font-weight: 350;
+    font-size: 0.9em;
 }
 
 .projectAboutInfoContainer
