@@ -304,13 +304,13 @@ body {
 .projectInfo{
     width:80%;
 }
-.projectAbout h1{
+/* .projectAbout h1{
 
 }
 .projectAbout h2{
 
-}
-.projectInfo h3{
+} */
+.projectInfo h3, .projectInfo h3{
     font-weight: 350;
 }
 
@@ -350,9 +350,9 @@ body {
     }
 }
 
-.ProjectPageSubtitle{
+/* .ProjectPageSubtitle{
 
-}
+} */
 
 
 .ProjectPageSubtitle h1{
