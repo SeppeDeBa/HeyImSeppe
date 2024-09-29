@@ -7,7 +7,9 @@
 }
 :root{
     --MyHeaderOrange: #e0906e;
+    --MyTextOrange: #c2714f;
     --MyDarkPurple:#3c3b60;
+    --MyBrightPurple: #9896ce;
 }
 
 
@@ -43,7 +45,7 @@ body {
 }
 
 .about-me-text p, .about-me-bottom-text p{
-    color: #c2714f;
+    color: var( --MyTextOrange);
     font-size: 20px;
 }
 
@@ -70,7 +72,7 @@ body {
     left: 0;
     width: 100%;
     padding: 20px 10%;
-    background: #e0906e;
+    background: var(--MyHeaderOrange);
     display: flex;
     justify-content: space-between; 
     align-items: center;
@@ -79,7 +81,7 @@ body {
 
 .logo {
     font-size: 35px;
-    color: #3c3b60;
+    color: var(--MyDarkPurple);
     text-decoration: none;
     font-weight: 600;
     transition: 0.3s;
@@ -105,7 +107,7 @@ body {
 
 .navbar a {
     font-size: 23px;
-    color: #3c3b60;
+    color: var(--MyDarkPurple);
     text-decoration: none;
     font-weight: 500;
     margin-left: 35px;
@@ -125,7 +127,7 @@ body {
 }
 
 .navbar a:hover {
-    color: #9896ce;
+    color: var(--MyBrightPurple);
 }
 
 .container {
@@ -277,7 +279,7 @@ body {
 
 
 #footer {
-    background-color: #e0906e;
+    background-color: var(--MyHeaderOrange);
     width: 100%;
     position: relative;
     height: 100px;
