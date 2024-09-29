@@ -312,7 +312,7 @@ body {
 } */
 .projectInfo h3, .projectAbout h3{
     font-weight: 350;
-    font-size: 0.9em;
+    font-size: clamp(0.3rem, 1vw, 2rem);
 }
 
 .projectAboutInfoContainer
@@ -354,6 +354,10 @@ body {
 /* .ProjectPageSubtitle{
 
 } */
+
+.projectInfo h1, .projectAbout h1{
+    font-size: clamp(1.5rem, 2vw, 4rem);
+}
 
 
 .ProjectPageSubtitle h1{
