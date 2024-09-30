@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seppe De Baere Portfolio website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+
+<header class="header">
+    <a href="/HeyImSeppe/index.html" class ="logo">Seppe De Baere</a>
+
+    <nav class ="navbar">
+        <a href ="/HeyImSeppe/index.html">Main</a>
+        <a href ="/HeyImSeppe/aboutMe.html">About me</a>
+        <a href ="/HeyImSeppe/projects.html">Projects</a>
+        <a href ="/HeyImSeppe/images/CVSeppeDeBaere.pdf" download>Download Resume</a>
+
+    </nav>
+</header>
+
+<div class= "projectPageContainer">
+    <div class= "projectPageDividerHorizontal">
+
+        <img src = "/HeyImSeppe/images/WFC.gif" alt = "WaveFunctionCollapse">
+        <div class = "projectAboutInfoContainer">
+            <div class = "projectInfo">
+                <h1>Wave Function Collapse</h1>
+                <h3><strong>Role:</strong></strong> research + programming<br>
+                <strong>Size:</strong> solo<br>
+                <strong>Time span:</strong> 2 months<br>
+                <strong>Engine:</strong> Unity
+                </h3>
+            </div>
+            <div class = "projectAbout">
+                <h1>About</h1>
+                <h3>A solo research project of my own choice!<br>
+                    Wafe Function Collapse is an algorithm commonly used for procedural conent generation such as levels, maps or even textures. <br>
+                    This project features a center square, with a tile system and flexible input.
+                    This page is an abbreviated version of my read.md of: 
+                    <a href = "https://github.com/Howest-DAE-GD/gpp-researchtopic-SeppeDeBa">git link</a>
+                </h3>
+            </div>
+        </div>
+    </div>
+    <div class = "ProjectPageSubtitle">
+        <h1> Short-form summary:</h1>
+        <h3>Throughout this project I worked on the main prototypes of the running, kicking and ability system, aswell as finishing the <strong>alien ability</strong>, and making a <strong>custom UI system for controllers</strong>.<br>
+        This project mainly taught me how important it is to <strong>plan out sprints</strong>, and stay in <strong>communication with artists and other colleagues</strong>.<br><br>
+        Code snippets can be asked for but will not be shown here to avoid plagiarism as the project is owned by Howest to.
+        The project gave me tons of confidence in what I am capable of doing, and taught me how to <strong>program more methodically and slower</strong>, and putting a focus on refactor later instead of shotgun-program now.<br>
+        I've grown to love working in a group, and following a sprint-based schedule helped a lot with estimating time and giving myself mroe time to explore and hone my skills while working, while still focussing on a set goal.
+    </h3>
+        <h1>Introduction:</h1>
+        <h3> 
+            This was a solo project exploring a topic of my own choice!<br>
+            It was an immensely hard choice to pick this over AI topics such as neural network programming and flow field.<br>
+            What Quantum states are and the references I've used will be left on my Git page. On here I will delve more into my process and what I've learned.<br>
+            
+        </h3>
+        <h1>Contents of the project</h1>
+        <h2>WFC Core</h2> 
+        <h3>The core is the starting tile and the central script holding the grid. <br>
+            It's my first time working with a C# multidimentional array.
+            As shown on the image below I hold a list of directions that still need to be collapsed, aswell as an array of available directions.
+            This was to leave the options open to go diagonal.<br>
+            If I would do it again I would probably choose a Dictionary as an alternative as I see it as the C# equivalent of a map, making it easier to search.
+            <img src = "/HeyImSeppe/images/WFC.gif" alt = "WaveFunctionCollapse">
+            This core goes through the following steps:
+            1. define the current x and y.
+            2. Add all nodes to the current nodes options.
+            3. in each direction, check the neighbours direction and check if its within the grid size.
+            4. if its valid, remove the nodes that are not compatible between that node and the current nodes list.
+            5. do a safety duplicate check.
+            6. Instantiate the node
+        </h3>
+        <br>
+        <h2> Nodes and NodeConnections:</h2>
+        <h3> The Node and Nodeconnections are something I'm very proud of, but also something I still consider open to improvements.<br>
+            The node decides what outputs it holds, such as a road going eastwards or water going southwards, aswell as its prefab.<br>
+            <img src = "/HeyImSeppe/images/WFCNode.png" alt = "WFC Node image">;
+            The node connections then has a name indicating what direction and type it is going to such as [Road Going Downwards]<br>
+            This has all the nodes that are allowed to be placed under any tile that has a valid connection connecting to the road coming from above itself.<br>
+            The system is <strong>reusable</strong> and easily <strong>expandable</strong>. The main downside and opportunity in the usage lays in it taking a little while to set-up, but is very easily modifyable, and easy to add new tiles to existing Nodes and connections.
+            <img src = "/HeyImSeppe/images/WFCNodeConnection.png" alt = "WFC NodeConnection image">;
+        </h3>
+        <h1>The results</h2><br>
+        <h2>The good</h2>
+        <h3><strong>Easy to understand</strong><br>
+            -> The algorithm works very intuitively and the core concept personally doesn't feel hard to grasp<br>
+            -> The way I built it made it very expandable and made the creation of new tiles not that hard<br>
+            <strong>Versatile</strong><br>
+            WFC is not only used for levels, but can be used for anything that sequentially follows anything, in any dimention. Examples such as music<br>
+            <strong>Result</strong><br>
+            The result makes for a cool landscape that can be further controlled by adding weights to the connections.<br>
+            <strong>Compatibility with other algorithms</strong><br>
+            This seems like the main feature of WFC to me. It can offer both an awesome base template for a level, or be used to give some extra detail here and there.<br>
+            <strong>Strong with itself</strong><br>
+            A big strength I can see here is that it gives me the feeling (I have not tried this) that it's even stronger when layered with itself. This can be through using smaller WFC'es to generate for example buildings, to then again use as templates in the larger WFC.<br>
+            </h3>
+        <h2>The bad</h2>
+        Things i disliked about - and felt lacking from working with WFC
+
+        <strong>Fights itself</strong><br>
+        The algorithm either needs my version which is less reliant on Entropy, but is of lower quality, or quickly feels like an NP-Complete problem.<br>
+        If there is a mistake made in the structure, it can be hard to debug. The key to avoiding this seemed like planning ahead with the observation method between nodes. (subjective point)<br>
+        <strong>Also the result</strong><br>
+        I liked the results, but they were scattered and hard to control<br>
+        The two main things i lack that give more controlability is a method of giving a starting input and weights, but from the results I've seen, they still are quite lackluster compared to manual placement for finer works.<br>
+        <h2>The ugly</h2><br>
+        <strong>Use a Gridmap/Bitmap instead of a starting tile</strong><br>
+        I feel like it's not a WFC in the truest sense as i cannot give it a starting input, which is one of the big advantages on using this algorithm on a smaller scale<br>
+        <strong>Weights</strong><br>
+        Another aspect I wish I added as it also gives more controlability over the output result<br>
+
+
+        <h1>What did I learn?</h1>
+        <h3><strong>1. it's important to think about how artists will use my code and work on the game.</strong><br>
+            &ensp; An example would be to not take control over specific meshes to show up or be hidden, but instead work with an object root system so that the artist can always add/remove things like particles, effects and additional meshes as they please.<br>
+            <br><strong>2. Documentation is awesome!</strong><br>
+            &ensp; This was my first project using C++ in Unreal, and the documantation can be hard to find sometimes... However it was very fun to try out new things while working on this project. New engines are always fun to learn, and this really showed me both how much you can keep learning an engine, aswell as how I would change certain aspects of the engine if it was my own.<br>
+            <br><strong>3. Knowing what colleagues are doing is the key to a great project.</strong><br>
+            &ensp; Using HackNPlan has shown me how great it is to plan out a whole production sprint. We had very minimal task blocking as we could work parallel with the artists. Whenever we worked on for example the characters, we could constantly ask them what they need/want. This in turn allowed us to know how to implement things they needed, and more importantly allowed us to communicate on the structure and needs of the topic at hand.<br>
+            <br><strong> 4. Break down complex problems into smaller tasks.</strong><br>
+            &ensp; Running into problems such as the UI showed me to not try too much "shotgun programming".<br>
+            I learned to <strong>be more confident in what I can do, which in turn taught me to work smarter when doing it.</strong><br>
+            Normally I would try out changings aspects of the code and seeing what works based on my programming knowledge. In this project it was however a great insight to talk to the programming supervisor aswell as my fellow programmer.<br>
+            Relaying how code works and documenting it was of immense value for eachother.
+            This allowed me to also to plan out how I'd make systems expandable and reusable, and refactor after getting feedback from my peers and supervisor.<br>
+        </h3>
+
+        <h1>Conclusion</h1>
+        <h3>**WFC seems like a strong tool, yet weak on its own. ** It feels a bit too messy on a larger scale, but controllable enough to make solid rougher wholes, that can then be refined through other methods.<br>
+            This project was a joy to work on, and has tingled my interest in proceduralism. Yet I do think that AI interests me more, which was one of my personal goals to discover for this project.<br>
+            I think theres a lot of room for improvements, but I'd definitely be able to use the project for wilder, rougher landscapes.<br>
+            <br>
+            From the research I've found I think there's still a lot more possibilities to be done with WFC to help gameplay programmers create fascinating mechanics, and not for it to be used predominantly as a general tool to apply art</h3><br>
+
+        <h1>Relevant Links</h1>
+        <h3>
+            <a href = "https://github.com/Howest-DAE-GD/gpp-researchtopic-SeppeDeBa?tab=readme-ov-file">Git research page </a><br> 
+        </h3>
+    </div>
+
+
+</div>
+
+
+
+</body>
+</html>
