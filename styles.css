@@ -340,7 +340,7 @@ body {
 
 .projectAboutInfoContainer .projectInfo, 
 .projectAboutInfoContainer .projectAbout {
-    width: 80%; /* Both sections take up half the width */
+    width: 100%; /* Both sections take up half the width */
 }
 
 .projectAbout
