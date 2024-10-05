@@ -41,14 +41,18 @@ body {
 }
 .about-me-text h2, .about-me-bottom-text h2{
     color: var(--MyHeaderOrange);
-    font-size: 50px;
+    font-size: clamp(1rem, 3vw, 3rem);
     font-weight: 600;
     text-align: left;
 }
 
 .about-me-text p, .about-me-bottom-text p{
     color: var(--MyBrightPurple);
-    font-size: 20px;
+    font-size: clamp(0.4rem, 0.8vw, 2rem);
+}
+
+.about-image{
+    align-content:center;
 }
 
 .about-image img{
@@ -147,8 +151,9 @@ body {
 
 .sub-title {
     margin-top: 30px;
+    margin-bottom: 30px;
     /* display: flex; */
-    font-size: 60px;
+    font-size: clamp(1rem, 3vw, 3rem);
     font-weight: 600;
     color: var(--MyHeaderOrange);
     text-align: left;
