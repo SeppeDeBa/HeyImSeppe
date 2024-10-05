@@ -53,9 +53,13 @@
 
         <h3>The main things I worked on were assigning random keys every X seconds and having 1 keyboard control both players.<br>
             The 1 keyboard blocked us for a while as you cannot assign 1 Unreal Controller class to multiple actors.<br>
-            This I circumvented by giving the controller to a central entity, which pulsed the 
-            
+            This I circumvented by giving the controller to a central entity, which consumed the input and sent it to other entities needing it (both pirates).
+            <br>
             This game jam was my first time working with artists an someone from animation.<br>
+            Communication and planning was extremely important, aswell as constantly going back and forth between me and my fellow programmer.<br>
+            Everything had to be planned and made to be reusable quickly, as there was a time limit.<br>
+            
+
             In this page you will find an explanation on how the project works, aswell as my thoughts after finishing it.
             <br><br>
             There are two aspects I would emphasize when asked what I find the most important in this project.<br>
@@ -66,119 +70,36 @@
             <strong>2. Be critical of results, cons are as valuable to learn as pro's</strong><br>
             In this project I experienced some up- and downsides (written down on the git-page and below). WFC showed me many upsides but also that its strengths lie in combining it with other algorithms.<br>
             I was very happy with my results, and could have left it at mentioning it works fine and is cool. But by not isolating the pro's, but taking into account the cons, I started to see the true value of WFC and how I would continue working on this project.
-           
-    </h3>
-        <h3>This project gave me the opportunity work out a research topic.<br>
-            In this page you will find an explanation on how the project works, aswell as my thoughts after finishing it.
-            <br><br>
-            There are two aspects I would emphasize when asked what I find the most important in this project.<br>
-            <strong>1. Practice documenting work</strong><br>
-            In DAE we work on many projects, but not that many we have to document. I think its extremely important that any project I work on, can be passed on to the next person responsible and it's not a treasure hunt for logical choices.<br>
-            Practicing writing about not only the result, but also the general topic of this project saves time even for myself when looking back on it, and will be handy for those ahead of me.<br>
-            <br>
-            <strong>2. Be critical of results, cons are as valuable to learn as pro's</strong><br>
-            In this project I experienced some up- and downsides (written down on the git-page and below). WFC showed me many upsides but also that its strengths lie in combining it with other algorithms.<br>
-            I was very happy with my results, and could have left it at mentioning it works fine and is cool. But by not isolating the pro's, but taking into account the cons, I started to see the true value of WFC and how I would continue working on this project.
-           
-    </h3>
+        </h3>
         </div>
         <h1>Introduction:</h1>
         <h3> 
-            This was a solo project exploring a topic of my own choice!<br>
-            It was an immensely hard choice to pick this over AI topics such as neural network programming and flow field.<br>
-            What Quantum states are and the references I've used will be left on my Git page. On here I will delve more into my process and what I've learned.<br>
+            This was a project with me and 4 others over the span of 2-3 days.<br>
+            The time pressure was on and our goal was to make a game focussed on fun gameplay, cute visuals and nailing the theme of chaos.
             
         </h3>
-        <h1>Contents of the project</h1>
-        <h2>WFC Core</h2> 
-        <h3>The core is the starting tile and the central script holding the grid. <br>
-            It's my first time working with a C# multidimentional array.
-            As shown on the image below I hold a list of directions that still need to be collapsed, aswell as an array of available directions.
-            This was to leave the options open to go diagonal.<br>
-            If I would do it again I would probably choose a Dictionary as an alternative as I see it as the C# equivalent of a map, making it easier to search.<br>
-            <img src = "/HeyImSeppe/images/WFC.gif" alt = "WaveFunctionCollapse"><br>
-            This core goes through the following steps:
-            1. define the current x and y.
-            2. Add all nodes to the current nodes options.
-            3. in each direction, check the neighbours direction and check if its within the grid size.
-            4. if its valid, remove the nodes that are not compatible between that node and the current nodes list.
-            5. do a safety duplicate check.
-            6. Instantiate the node
+        <h1>My role</h1>
+        <h2>Input</h2> 
+        <h3>My biggest challenge was figuring out a way to combine the new Enhanced Input system working with 1 keyboard for 2 actors, and randomizing all of them.<br>
+            A controller can only be owned by 1 actor. To fix this I assigned an integer value to all inputs needed. Every time the buttons randomize, it gets as many different integers as needed, and sets those as the requirements in the button checks.<br>
+            The keyboard gets owned by the gamemode when starting the game, where any keyboard is consumed, converted to an integer, and executed.
+            The actors themselves, for example when hit, can communicate to the gamemode that the actor should not get input and go into a hit animation.
+
         </h3>
         <br>
-        <h2> Nodes and NodeConnections:</h2>
-        <h3> The Node and Nodeconnections are something I'm very proud of, but also something I still consider open to improvements.<br>
-            The node decides what outputs it holds, such as a road going eastwards or water going southwards, aswell as its prefab.<br>
-            <img src = "/HeyImSeppe/images/WFCNode.png" alt = "WFC Node image">;
-            The node connections then has a name indicating what direction and type it is going to such as [Road Going Downwards]<br>
-            This has all the nodes that are allowed to be placed under any tile that has a valid connection connecting to the road coming from above itself.<br>
-            The system is <strong>reusable</strong> and easily <strong>expandable</strong>. The main downside and opportunity in the usage lays in it taking a little while to set-up, but is very easily modifyable, and easy to add new tiles to existing Nodes and connections.
-            <img src = "/HeyImSeppe/images/WFCNodeConnection.png" alt = "WFC NodeConnection image">;
+        <h2> User Interface</h2>
+        <h3> UI was less work, but more exploration.<br>
+            It was my first time really interacting with the Unreal UI system. I loved how easy it was to implement different things we need, and explored ways to make it work with game logic.<br>
+            My related tasks were to make main-menu UI, having the control screen show, making a system where any key can be shown as it shuffles through the keyboard, and showing the drink bottle emptying as a timer for the shuffle.<br>
         </h3>
-        <h1>The results</h2><br>
-        <h2>The good</h2>
-        <h3><strong>Easy to understand</strong><br>
-            -> The algorithm works very intuitively and the core concept personally doesn't feel hard to grasp<br>
-            -> The way I built it made it very expandable and made the creation of new tiles not that hard<br>
-            <strong>Versatile</strong><br>
-            WFC is not only used for levels, but can be used for anything that sequentially follows anything, in any dimention. Examples such as music<br>
-            <strong>Result</strong><br>
-            The result makes for a cool landscape that can be further controlled by adding weights to the connections.<br>
-            <strong>Compatibility with other algorithms</strong><br>
-            This seems like the main feature of WFC to me. It can offer both an awesome base template for a level, or be used to give some extra detail here and there.<br>
-            <strong>Strong with itself</strong><br>
-            A big strength I can see here is that it gives me the feeling (I have not tried this) that it's even stronger when layered with itself. This can be through using smaller WFC'es to generate for example buildings, to then again use as templates in the larger WFC.<br>
-            </h3>
-        <h2>The bad</h2>
-        <h3>
-
-        
-        Things i disliked about - and felt lacking from working with WFC
-
-        <strong>Fights itself</strong><br>
-        The algorithm either needs my version which is less reliant on Entropy, but is of lower quality, or quickly feels like an NP-Complete problem.<br>
-        If there is a mistake made in the structure, it can be hard to debug. The key to avoiding this seemed like planning ahead with the observation method between nodes. (subjective point)<br>
-        <strong>Also the result</strong><br>
-        I liked the results, but they were scattered and hard to control<br>
-        The two main things i lack that give more controlability is a method of giving a starting input and weights, but from the results I've seen, they still are quite lackluster compared to manual placement for finer works.<br>
-    </h3>
-        
-        <h2>The ugly</h2><br>
-        <h3>
-        <strong>Use a Gridmap/Bitmap instead of a starting tile</strong><br>
-        I feel like it's not a WFC in the truest sense as i cannot give it a starting input, which is one of the big advantages on using this algorithm on a smaller scale<br>
-        <strong>Weights</strong><br>
-        Another aspect I wish I added as it also gives more controlability over the output result<br>
-
-    </h3>
-        <h1>What did I learn?</h1>
-        <h3><strong>1. How to document, and put it on a readme.md</strong><br>
-            &ensp; Noting down how to use a project and the process is a key factor to not repeating tasks and cooperating with other colleagues.<br>
-            I personally am a big fan of x.y.z formatting for chapters, and is something I usually do. Reflecting on my own readme and improving on it helped me make it more clear by using imagery and focussing on what's important.<br>
-            I am of the opinion that new documentation should be in-line and similar to existing documentation, but this project helped a lot in <strong>discovering my style of incorporating programming into how I documented</strong> for my previous degree.<br><br>
-            
-            
-            <br><strong>2. Results are not restricted to positive ones, and negative conclusions can give even more insight</strong><br>
-            &ensp; I went into this project hoping to make a procedural tile system. I came out with one I wouldn't use in a game, but armed with more ideas and directions to get to an even better one.<br>
-            The most important conclusion I came to was not how good/bad WFC is, but how intertwined it can work with other algorithms. The time I put into this project might have cost me a good chunk of time, but it also showed me the direction I'd go in if I'd make a procedural level system.
-            I adore learning, so I love researching. After this project I'll try to stand still more after the project to look back, and not wrap it up and go to what then seems like the next appropriate project.<br>
-
-            <br><strong>3. Think more about the visual structure and usage of a project</strong><br>
-            Because of my past experiences, I'm very experienced in creative thinking and visualising structures of code fast.<br>
-            This however doesn't mean that it's always correct. My UI is very expandable, easily usable, but could still use simplification and more linking.<br>
-            Drawing out, writing down and talking to peers about ideas helps greatly with finding improvements for the project.<br>
-            One of my biggest strength is empathy and having a very good feeling of what people like, but when working on tools I should consider clarity vs quality.<br>
-            I think I could have made a central controlling system for Nodes and NodeConnections, which is more work on the programming side, but would be well worth it.
-            
+        <h2> Variety</h2>
+        <h3> More smaller tasks and cooperation comes up of course when working on a Game Jam.<br>
+            Some extra tasks include but are not limited to:
+            - Brainstorming with other programmer about the working of the traps.
+            - Thinking about quick fixes for things such as units being out of camera.
+            - Designing level layout and working out core gameplay.
         </h3>
-
-        <h1>Conclusion</h1>
-        <h3>**WFC seems like a strong tool, yet weak on its own. ** It feels a bit too messy on a larger scale, but controllable enough to make solid rougher wholes, that can then be refined through other methods.<br>
-            This project was a joy to work on, and has tingled my interest in proceduralism. Yet I do think that AI interests me more, which was one of my personal goals to discover for this project.<br>
-            I think theres a lot of room for improvements, but I'd definitely be able to use the project for wilder, rougher landscapes.<br>
-            <br>
-            From the research I've found I think there's still a lot more possibilities to be done with WFC to help gameplay programmers create fascinating mechanics, and not for it to be used predominantly as a general tool to apply art</h3><br>
-
+        
         <h1>Relevant Links</h1>
         <h3>
             <a href = "https://lwielandts.itch.io/plundernpints"> Itch page </a><br> 
