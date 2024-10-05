@@ -374,7 +374,10 @@ color: darkred;
 /* .ProjectPageSubtitle{
 
 } */
-
+.ProjectPageSubtitle img{
+    max-width: 50%;
+    height:auto;
+}
 .projectInfo h1, .projectAbout h1{
     font-size: clamp(0.9rem, 1.5vw, 4rem);
     color:var(--MyHeaderOrange);
