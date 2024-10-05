@@ -375,7 +375,7 @@ color: darkred;
 
 } */
 .ProjectPageSubtitle img{
-    max-width: 50%;
+    max-width: 100%;
     height:auto;
 }
 .projectInfo h1, .projectAbout h1{
