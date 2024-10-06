@@ -158,16 +158,16 @@ body {
     padding-left: 20%;
 }
 
-#portfolio{
-    padding: 15px 0;
+/* #portfolio{
+    /* padding: 15px 0; */
 
-}
+} */
 
 .projectList {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 40px;
-    margin-top: 15px;
+    /* margin-top: 15px; */
     max-width: 75%;
     align-self:baseline;
 }
