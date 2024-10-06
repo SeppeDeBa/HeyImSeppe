@@ -158,10 +158,10 @@ body {
     padding-left: 20%;
 }
 
-/* #portfolio{
-    /* padding: 15px 0; */
+#portfolio{
+     padding: 0px 0px; 
 
-} */
+}
 
 .projectList {
     display: grid;
