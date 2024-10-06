@@ -137,7 +137,7 @@ body {
 .container {
     display: flex;
     justify-content: center;
-    height: 100vh;
+    /* height: 100vh; */
     align-items: center;
     padding: 10px 10%;
     margin-top: 15px;
@@ -169,6 +169,7 @@ body {
     grid-gap: 40px;
     margin-top: 15px;
     max-width: 75%;
+    align-self:baseline;
 }
 
 @media (max-width: 1024px) {
