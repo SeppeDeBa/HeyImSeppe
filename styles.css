@@ -219,13 +219,14 @@ body {
     transform: translateY(0px); 
     transition: transform 0.3s ease-in-out; 
     margin: 10px, 0;
+    font-size: clamp(1rem, 1.8vw, 3rem)
 }
 
 .intro p {
     opacity: 0; 
     transform: translateY(20px); 
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; 
-
+    font-size:clamp(0.3rem, 0.8vw, 2rem); 
 }
 
 
