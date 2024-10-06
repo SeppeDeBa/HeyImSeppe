@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seppe De Baere Portfolio website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+
+<header class="header">
+    <a href="/HeyImSeppe/index.html" class ="logo">Seppe De Baere</a>
+
+    <nav class ="navbar">
+        <a href ="/HeyImSeppe/index.html">Main</a>
+        <a href ="/HeyImSeppe/aboutMe.html">About me</a>
+        <a href ="/HeyImSeppe/projects.html">Projects</a>
+        <a href ="/HeyImSeppe/images/CVSeppeDeBaere.pdf" download>Download Resume</a>
+
+    </nav>
+</header>
+
+<div class= "projectPageContainer">
+    <div class = "ProjectPageSubtitle">
+        <div class = "HighlightBox">
+            <h1> Why Entity Component system?</h1>
+            <h3>
+                At DAE we put a huge focus on object-oriented programming. It's what I've gotten to know and am used to, and what I'm comfortable with.<br>
+                While asking veterans of the industry about interesting topics and themes, Data-oriented programming was the one I found myself struggling with the most.<br>
+                <br>
+                <strong>This page is more of a personal blogpost about my journey and why I'm delving into the topic of ECS.</strong>
+                The most important points I've learned are:<br>
+                1. Focus on 1 thing at a time, I took too much on my plate trying to combine learning a new engine, with a style of programming I hadn't done before AND tried to build it up through test-driven-development.<br>
+                It's good to be curious, but its better to accept limits and <strong>to not let the quantity of what you learn influence the quantity of what you learn</strong>.<br>
+                2. How is ECS used, what are its <strong>core benefits.</strong><br>
+                3. What do I want to do with ECS to <strong>further explore</strong> it.
+            </h3>
+        </div>
+        <h1>I've got a need... a need to cache</h1>
+        <h3>In class I ran into a certain insecurity. It's hard to admit but <strong>while learning about caching, I understand the theory but had no idea how to apply it.</strong><br>
+        It's awesome that Data is close but how does it get close? Do I put it close? Does it literally start from Compile-time order and can I then control it dynamically?<br>
+        It got me unsure about myself and It's a topic I regretfully avoided for a few months. The fellow students that have already done engineering degrees spoke about it so casually, but nobody goes into applications of caching.<br>
+        I'm a person that loves exploring and finding out about new things, so the idea of caching was like a mini-boss I wanted to beat in my rpg of life.<br>
+        Talking to some industry veterans and doing my research the topic that piqued my interest the most was ECS, hence giving me my first reason to do a project about it.<br>
+    </h3>
+        <h1>Data oriented programming... goes against intuition:</h1>
+        <h3> I come from a background of Occupational Therapy and have fought hard to build up and polish my programming skills.<br>
+            I was lucky enough to be able to do this through DAE, but this has burned object oriented programming into my brain.<br>
+            <strong>Any problem I have I solve through an object oriented mindset</strong> of abstracting and changing the objects themselves as its the only thing I've been doing for the last few years.<br>
+            Finding out about ECS, and seperating functionality from entities to this degree immediately peaked my interest!<br>
+            I looked at more sources for software architecture and the benefits. They were almost unending!<br>
+            As learned by my previous projects I did get sceptical and want to know the downsides. (shoutout <a href = "https://www.youtube.com/watch?v=JxI3Eu5DPwE">Bob Nystrom</a>);          
+            <br>
+            Wanting to break out of my object oriented cage I my mind fully on the topic of ECS, I decided to work on my first ECS based project: Project Spellsprout.
+        </h3>
+        <h1>Fiddling, exploration, and putting too much on my plate</h1>
+        <!-- <h2>Input</h2>  -->
+        <h2>The engines</h2>
+        <h3>
+           Firstly I looked at some engines that (can) apply ECS.<br>
+           The main ones I found found were:<br>
+           - Unity (<a href = "https://unity.com/ecs">ECS</a>)
+           - Unreal (<a href = "https://dev.epicgames.com/community/learning/talks-and-demos/37Oz/large-numbers-of-entities-with-mass-in-unreal-engine-5">Mass</a> -> using "fragments" and "processors")<br>
+           - EnTT (<a href = "https://github.com/skypjack/entt">git</a>) <br>
+           - Bevy (<a href = "https://bevyengine.org/">website</a>) <br>
+           <br>
+           
+        </h3>
+        <h2>Experimenting</h2>
+        <h3>To get to know ECS I chose Bevy and Unreal to start with.<br> 
+            As far as I can find Unity has the best known ECS system between Unity and Unreal, so I chose to go with Unreal as I love working with the blueprinting/CPP combination and want to gain experience there too.<br>
+            Bevy was a choice to go more into the unknown and I've always wanted to fiddle around with Rust.<br>
+            <br>
+            <strong>The Unreal documentation was quite hard to find</strong> as normal Unreal already has a rough time with documenting everything, and I expected an extention to the mass plugin to not have a lot written about it.<br>
+            I made a recreation of an official unreal <a href = "https://youtu.be/f9q8A-9DvPo?si=aReS_FYrpNBJBiX5">Mass tutorial</a>.<br>
+            My main findings were for it be hard to understand their specific terms. It seems that they're not allowed to use the normal ECS terms and changed some to "fragment" and "processor".<br>
+            The adding of requirements and shared requirements was however very intuitive. Querying was nice, as were tags. Fragments and processors were hard to use without looking at examples.<br>
+            <br>
+            
+            To use Bevy I first went through a tutorial of <a href = "https://doc.rust-lang.org/book/">the rust book</a>.<br>
+            It was hugely interesting to learn this programming language as I've heard a lot of pro- and con rust talk.<br>
+            Cargo seems like neverland magic coming from the maze that was learning to link and compile in Visual studio C++.<br>
+        </h3>
+        <h2>Icarus flew too close to the sun</h2>
+        <h3>
+            Here comes my biggest lesson of this project, and something I will take with me for life.<br>
+            My PC had been broken for a good while with repairs being hundreds of euros, but with being able to use my partners PC I've finally been able to start programming again!<br>
+            <br>
+            I come from a background that's not very programming related and this has brought with it a certain amount of insecurities.<br>
+            Starting work again and Unreal and Rust going so smoothly I got my confidence back and planned out my project and wanted to work through the methodology of test-driven-development (mainly through Bob Martins talks and posts)!<br>
+            1. make pseudo code for the core components and systems I want, 2. set up Unit-Tests to start the TDD cycle, 3. make an awesome game.<br>
+            <br>
+            Day after day I get much less progress than I would usually expect from any project. I get stuck working through <a href = "https://bevy-cheatbook.github.io/patterns/system-tests.html">unit testing</a>, and working out how to add the relevant features to Bevy.<br>
+            I knew completely how I wanted my game to look like, and mostly how the structure of my ECS would look like. I ask people with ECS experience for feedback on my structure and pseudo-code and improve on it, but am still stuck in the TDD steps, while fighting Bevy to get stuff working.<br>
+            <br>
+            After a few days of these struggles I realise my mistakes and needing to pull back. I get overloaded cognitively and am losing confidence. The hardest part is admitting that I know what to do if I had just picked Unreal, but wanting to go for a engine in a scope much too big AND with a new methodology... was a mistake<br>
+            note down my findings for some introspective thinking and decide to make this page and rethink how to continue.<br>
+            My game (farming plants to use them for a survivors like defence game) doesn't necessarily need ECS and I might be forcing it. I know how to apply ECS, but not through Bevy and adding TDD is overloading me with new things.<br>
+        </h3>
+        <h2>What do I do?</h2>
+        <h3>I've felt what it is to fly too close to the sun, but don't want to give up ECS. I scrapped project spellsprout, holding it for a non-learning hobby project, and decide on what's next.<br>
+        Luckily I get to do a bachelor project about a topic of my own choice. I've looked at problems ECS already fixes and interesting spots where it could be applied.<br>
+        I am now doing literature study to see the benefits of ECS particularly on simulations, and would like to have a better grasp on its benefits by applying it to a project.<br>
+        <br>
+        For the semester of september-february I will be applying ECS to Cellular-Automata[CA], as I'm curious to see the benefits of having CA implemented in a new way.<br> 
+        </h3>
+
+</div>
+
+
+
+</body>
+<footer id ="footer">
+    <a class ="logo">Find me at:</a>
+
+    <nav class ="navbar">
+        <a href ="https://www.linkedin.com/in/seppe-de-baere-50480128a/">LinkedIn</a>
+        <a href ="https://github.com/SeppeDeBa">Github</a>
+        <a href="mailto:Seppedebaere@hotmail.com">Seppedebaere@hotmail.com</a>
+
+    </nav>
+
+</footer>
+</html>
