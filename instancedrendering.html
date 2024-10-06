@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seppe De Baere Portfolio website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+
+<header class="header">
+    <a href="/HeyImSeppe/index.html" class ="logo">Seppe De Baere</a>
+
+    <nav class ="navbar">
+        <a href ="/HeyImSeppe/index.html">Main</a>
+        <a href ="/HeyImSeppe/aboutMe.html">About me</a>
+        <a href ="/HeyImSeppe/projects.html">Projects</a>
+        <a href ="/HeyImSeppe/images/CVSeppeDeBaere.pdf" download>Download Resume</a>
+
+    </nav>
+</header>
+
+<div class= "projectPageContainer">
+    <div class= "projectPageDividerHorizontal">
+
+        <img src = "/HeyImSeppe/images/InstancedCubes.png" alt = "InstancedCubesPNG">
+        <div class = "projectAboutInfoContainer">
+            <div class = "projectInfo">
+                <h1>Vulkan Instanced Rendering </h1>
+                <h3><strong>Role:</strong></strong> programming<br>
+                <strong>Size:</strong> solo<br>
+                <strong>Time span:</strong> 2 months<br>
+                <strong>Engine:</strong> Vulkan
+                </h3>
+            </div>
+            <div class = "projectAbout">
+                <h1>About</h1>
+                <h3>A self-made version of Vulkan where I try out multiple rendering pipelines simultaneously, and apply instancing to 3D<br>
+                   Following the <a href = "https://vulkan-tutorial.com/">vulkan tutorial</a> to set up a baseline project, we got the opportunity to add an extra feature to our engine.<br>
+                   
+                   
+                   
+                </h3>
+            </div>
+        </div>
+    </div>
+    <div class = "ProjectPageSubtitle">
+        <div class = "HighlightBox">
+            <h1> Short-form summary:</h1>
+            <h3>
+                In this project I made Vulkan pipelines for 2D, 3D and instanced 3D rendering.<br>
+                I talk about learning points and things I would tackle differently now such as putting instanced data in meshes instead of the pipeline, aswell as giving a short explanation on how the project works.
+                
+            </h3>
+        </div>
+        <h1>Introduction:</h1>
+        <h3> 
+            A project made throughout the course Graphics-Programming 2.<br>
+            In GP1 we already made a rasterizer and raytracer. This taught us how to apply different maps, optimisation techniques, and cameras.<br>
+            Now it's time to tackle a new and popular engine.<br>
+            
+        </h3>
+        <h1>Why Instanced rendering?</h1>
+        <!-- <h2>Input</h2>  -->
+        <h3>
+            Instanced rendering is something that piqued my interest. Games such as <a href = "https://store.steampowered.com/app/1468720/Ultimate_Epic_Battle_Simulator_2/">Ultimate Epic Battle Simulator</a> use this technique to simulate an unbelievable amount of actors in 1 scene.<br>
+            I wanted a topic that forced me to use a bit more hlsl to get me more comfortable with it.<br>
+            Lighting and shadows are not something that interest me too much, but an alternative I was thinking of was a portal system using a camera-like system to display that view onto another plane.<br>
+        </h3>
+        <br>
+        <h1> The render pipelines</h1>
+        <h3> A core necessity to make the pipelines work is to have different buffers.<br>
+            This was done through a simple inheritance system.<br>
+            <a href = "https://github.com/SeppeDeBa/Vulkan_Instanced_Rendering/blob/master/Project/GP2DataBuffer.h">Buffer Github</a><br>
+            In similar fashion I worked out a base pipeline having a create, initialize, record, cleanup function, aswell as some getters.<br>
+            From here on out I split it up in a 2D and 3D pipeline, and eventually my instanced pipeline.
+            The key unique functionality of the instanced pipeline is the use of vectors of VertexInstances and InstanceBuffers, aswell as having multiple BindingDescriptions and AttributeDescriptions.<br>
+            <a href = "https://github.com/SeppeDeBa/Vulkan_Instanced_Rendering/blob/master/Project/GP2Pipeline.h">Github Pipelines</a>
+            <img src = "/HeyImSeppe/images/ICPipeline.png" alt = "PipelineCode">
+            <br><br>
+            Looking back at it, I think some of these could be reworked into a more central class, and have the <a href = "https://github.com/SeppeDeBa/Vulkan_Instanced_Rendering/blob/master/Project/GP2Mesh.h">mesh class</a> hold more data.<br>
+        </h3>
+        <h1> HLSL and linking</h1>
+        <h3> The pipeline holds information such as coordinates, different positions, and texture data.<br>
+            This gets pushed to the GPU, where it applies it uses its UBO (Uniform Buffer Object) and a texture atlas to get to the final view.<br>
+        </h3>
+        <h1>What would I change?</h1>
+        <h3>I'm much more interested in gameplay programming, but now having worked on more group projects and entering my third year these are the things I personally think could use improvement:<br>
+            &ensp; - Use IMGUI or another framework for visually controlling the pipelines and especially instance count, can use fileio to also hold values over different sessions<br>
+            &ensp; - Refactor data to be in more appropriate places such as some buffers being part of a mesh, and the mesh holding instance data.<br>
+            &ensp; - Do deeper research into the sampling types to avoid the edges on my cubes<br>
+        </h3>
+
+
+        <h1>Relevant Links</h1>
+        <h3>
+            <a href = "https://github.com/SeppeDeBa/Vulkan_Instanced_Rendering/tree/master"> Main Github page </a><br> 
+        </h3>
+    </div>
+</div>
+
+
+
+</body>
+<footer id ="footer">
+    <a class ="logo">Find me at:</a>
+
+    <nav class ="navbar">
+        <a href ="https://www.linkedin.com/in/seppe-de-baere-50480128a/">LinkedIn</a>
+        <a href ="https://github.com/SeppeDeBa">Github</a>
+        <a href="mailto:Seppedebaere@hotmail.com">Seppedebaere@hotmail.com</a>
+
+    </nav>
+
+</footer>
+</html>
