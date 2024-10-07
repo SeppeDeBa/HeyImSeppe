@@ -312,14 +312,11 @@ body {
     gap: 3%;
     align-items: center;
 }
-.projectPageDividerHorizontal img{
+.projectPageDividerHorizontal img, .projectPageDividerHorizontal video{
     width:55%;
     height: max-content;
 }
-.projectPageDividerHorizontal video{
-    width:55%;
-    height: max-content;
-}
+
 .projectInfo{
     width:80%;
 }
