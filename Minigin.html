@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seppe De Baere Portfolio website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+
+    <header class="header">
+        <a href="/HeyImSeppe/index.html" class ="logo">Seppe De Baere</a>
+    
+        <nav class ="navbar">
+            <a href ="/HeyImSeppe/index.html">Main</a>
+            <a href ="/HeyImSeppe/index.html#portfolio">Projects</a>
+            <a href ="/HeyImSeppe/index.html#about-Me">About Me</a>
+            <a href ="/HeyImSeppe/images/CVSeppeDeBaere.pdf" download>Download Resume</a>
+    
+        </nav>
+    </header>
+
+<div class= "projectPageContainer">
+    <div class = "ProjectPageSubtitle">
+        <div class = "HighlightBox">
+            <h1> Whats my engine about?</h1>
+            <h3>
+                <a href = "https://github.com/SeppeDeBa/MiniGin2024">My engine</a> started from a Minigin base provided by DAE featuring SDL2 and glm.<br>
+                On this page I'll discuss some of the features I've added to recreate the game Digger.<br>
+                Do note that this project remains <strong>unpolished</strong>, and is put here to reflect personally on what I've done.<br>
+                <br>
+                I will mostly be talking about topics and features I personally like, features implemented that I will not go into detail about are:<br>
+                &ensp;- Game loop<br>
+                &ensp;- Multithreading (I will write a short paragraph about this, but not about the content of it in this project)<br>
+                &ensp;- Component system <br>
+                &ensp;- SDL implementation.<br>
+                &ensp;- Commands pattern.<br>
+                &ensp;- Controller input though bitmask<br>
+                &ensp;- Event listeners<br>
+                &ensp;- Decorator pattern (example is logging soundsystem)<br>
+                &ensp;- Class based state machines (used in bag)<br>
+            </h3>
+        </div>
+
+        <h1>Grid? Components vs Objects</h1>
+        <h3>
+            For the Grid I decided to use the component system and make every tile be a gameObject with a Tile.<br>
+            This way I could more easily add modular components such as a render component and locations. This only required some logic to control what tile is displayed.<br>
+            The grid itself is in essence a manager for these unique_ptrs with useful functions such as tile digging aswell as having some static variables to give other actors access to the size of the grid.<br>
+            <a href = "https://github.com/SeppeDeBa/MiniGin2024/blob/main/Digger/Grid.h">grid git .h</a><br>
+            <a href = "https://github.com/SeppeDeBa/MiniGin2024/blob/main/Digger/Grid.cpp">grid git .cpp</a><br>
+            <br>
+            This system goes hand in hand with the <a href = "https://github.com/SeppeDeBa/MiniGin2024/blob/main/Digger/GridMoveCommand.cpp">Grid move command</a> which can easily move across the grid, within the screen consuming an X and Y input.<br>
+        </h3>
+        <h1>Collision</h1>
+        <h3>For collision I decided to experiment with a two way system.<br>
+            I made a <a href = "https://github.com/SeppeDeBa/MiniGin2024/blob/main/Digger/CollisionComponent.h">base collision component</a> that checks what collision it has, and what tags it takes collision from.<br>
+            <strong>Something I don't like about my implementation is having to add the collisionTags in an enum class</strong>. It requires it to be added in here when making an inherited class from this, which beats the purpose of the inheritance somewhat.<br>
+            I'd argue a better way to approach it would be to use a <strong>tag integer</strong> and either using a static container to hold the types, or even go as far as using a multimap to use the 1 key, multiple values feature. I personally haven't tried this but am curious of doing it and will be testing this when school calms down.<br>
+            Definetily something to reconsider...<br>
+        </h3>
+
+        <h1>An example of UI</h1>
+        <h3> I've always enjoyed making systems and experimenting with UI with Unreal and now it's my time to add some own touches.<br>
+            An example of the UI component would be the <a href = "https://github.com/SeppeDeBa/MiniGin2024/blob/main/Digger/ModeSelectComponent.cpp">ModeSelectComponent</a>.<br>
+            The part I like about this class is the <strong>use of an already existing text component</strong> and adding controls to it to cycle through and do gameplay logics.<br>
+            I think an improvement could be to <strong>make it more expandable and reusable</strong>. Make a UICycleComponent for example that can go through an array of text with an execute function for when the confirmation is sent when it's active.<br>
+            Sadly I've not been able to get feedback on this.<br>
+
+        </h3>
+        <h1>Input Backbuffer</h1>
+        <!-- <h2>Input</h2>  -->
+        <h3>
+           A big problem I ran into was adding/removing commands to a controller while one is being executed, which is not as uncommon as you would expect.<br>
+           The solution to this was to make a backBuffer of commands when a new command gets made, that takes its place between update cycles.<br>
+           The use of a map came in great as I find it a very intuitive container to use and can easily be replaced with the buffer.<br>
+           I've been taught about the different containers, but have not been as consciously using them as I should have.<br>
+           This was a big learning moment to go over the commonly used containers, check their purpose and <strong>use them more by purpose and feeling, rather than going to vectors for comfort</strong>.<br>
+            <a href = "https://github.com/SeppeDeBa/MiniGin2024/blob/main/Minigin/InputManager.cpp">inputManager.h</a><br>;
+            <a href = "https://github.com/SeppeDeBa/MiniGin2024/blob/main/Minigin/InputManager.h">inputManager.h</a><br>;
+        </h3>
+
+        <h1>Important links:</h1><br>
+        <a href = "https://github.com/SeppeDeBa/MiniGin2024/tree/main">Git repo</a><br>
+    </div>
+</div>
+
+
+
+</body>
+<footer id ="footer">
+    <a class ="logo">Find me at:</a>
+
+    <nav class ="navbar">
+        <a href ="https://www.linkedin.com/in/seppe-de-baere-50480128a/">LinkedIn</a>
+        <a href ="https://github.com/SeppeDeBa">Github</a>
+        <a href="mailto:Seppedebaere@hotmail.com">Seppedebaere@hotmail.com</a>
+
+    </nav>
+
+</footer>
+</html>
