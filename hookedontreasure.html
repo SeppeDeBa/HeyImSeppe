@@ -23,166 +23,84 @@
 
     </nav>
 </header>
+
+<div class= "projectPageContainer">
+    <div class = "ProjectPageSubtitle">
+        <div class = "HighlightBox">
+            <h1> Whats this game?</h1>
+            <h3>
+                This game is me trying to mix some cool new elements to a grappling game.<br>
+                Among the many games I love, some are definetily speedrunning games and I'm a huuuuuge sucker for grappling hook(some would say im hooked badum tss).<br>
+                In this game you can do 5 levels with a bronze-gold speed rating. Besides the normal grappling hook you can also right click for an air blast, or hold control for "ski-ing". More on these in their own paragraphs.<br>
+                It was my first contact with UE5 C++ and was a challenge in game design. THE most important aspect of this game is fun and a good feeling!<br><br>
+
+
+            </h3>
+        </div>
+
+        <h1>Player control</h1>
+        <h3>
+            The grappling hook was a trial-and-error process to get the feeling just how I wanted it.<br>
+            The hook constantly pulls you towards the contact point, but still allows non-vertical input to influence how you swing.<br>
+            Personally I liked it with an even harder pull, but due to player feedback I lowered this and made the airblast more effective.<br>
+            <img src = "/HeyImSeppe/images/HookedGrapple.gif" alt = "GrappleGIF">
+            <br>
+            Speaking about this airblast you can right click to fly backwards. It makes sense as its... a blast of air, but is also a more fun spin on a classic dash system.<br>
+            The skill ceiling raises a lot and it feels great to use with the "ski'ing".<br>
+            <img src = "/HeyImSeppe/images/HookedBlast.gif" alt = "BlastGIF">
+            <br>
+            Player feedback let me know that falling felt not good. With the faster hook speed it wasn't too bad, but the hook was too hard for some gamers.<br>
+            This is why I chose for the option to go into a Tribes style Ski-mode. This allows you to frictionlessly glide over the floor, and not only being a way to save a fail but also giving opportunities on cool skillful play.<br>
+            Also a double jump just for fun!<br>
+            <img src = "/HeyImSeppe/images/HookedSki.gif" alt = "GrappleGIF">
+            <br>
+        </h3>
+        <h1>UI... but not really</h1>
+        <h3> One thing I've never liked about speedrunning games is having to track UI. It takes away your attention and is often more of a drag than something appealing and fun.<br>
+            To fix this I took a page out of the VR-development book. Games like <a href = "https://store.steampowered.com/app/342180/Arizona_Sunshine/">Arizona Sunshine</a> and <a href = "https://store.steampowered.com/app/546560/HalfLife_Alyx/">Half-life: Alyx</a> have always inspired me with intuitive and non HUD UI.<br>
+            I put my cooldowns in the form of bracelets on the players arm and lit them brightly. This makes it more easily visible to recognise the lights and don't force you to fully look at that side of the screen.<br>
+        </h3>
+        <h1>What would I do differently now with more experience under my belt?</h1>
+        <!-- <h2>Input</h2>  -->
+        <h3>
+           1. The biggest thing is I didn't <strong>build my project for expandability</strong> enough.<br>
+           I'd make the project with the weapon being inherited from a baseWeapon with something like a Primary and AltFire, perhaps those even split up.<br>
+           This would allow me to make different grappling hooks, left click movement guns or right click abilities.<br>
+           <br>
+           2. <strong>Add more square textures / clearer textures.</strong><br>
+            I've had the luck of talking to an inspiring game developer that talked to me about game feel, which I strived for a ton in this project.<br>
+            He mentioned the amazing fact that (especially in the hub), speed is often related to zoom and texel visibility.<br>
+            Zoom and rumble is something I did think about but decided not to put in in this basic version, but texel density and having more movement on the walls does indeed make the swinging feel faster.<br>
+            A car in a desert can look like its going fast if the desert seems to pass by faster.<br>
+            <br>
+            3. DO NOT USE STARTER CONTENT... what was I thinking... adding so many MBs to my build and using them aswell instead of making some basic alternatives.<br>
+        </h3>
+        <h1>Some Screenshots</h1><br>
+        <img src = "/HeyImSeppe/images/HookedImg1.png" alt = "Img1"><br>
+        <img src = "/HeyImSeppe/images/HookedImg2.png" alt = "Img2"><br>
+        <img src = "/HeyImSeppe/images/HookedImg3.png" alt = "Img3"><br>
+        <img src = "/HeyImSeppe/images/HookedImg4.png" alt = "Img4"><br>
+        <img src = "/HeyImSeppe/images/HookedImg5.png" alt = "Img5"><br>
+
+
+        <h1>Try the game!</h1><br>
+        <a href = "https://seppedeba.itch.io/hookedontreasure">Itch build download (yes with starter content sadly)</a><br>
+        <a href = "https://github.com/SeppeDeBa/HookedOnTreasure">Git page</a><br>
+    </div>
+</div>
+
+
+
 </body>
-
-
-<main class = "content">
-    <!--  ABOUT ME   -->
-
-    <div class = "about-me">
-        <div class = "about-me-text">
-            <h2>Hi, I'm Seppe!</h2>
-            <p> A <boldened> Gameplay Programmer</boldened> and former <boldened> Occupational Therapist(OT).</boldened><br>
-            I adore learning new things and am always excited for new challenges. <br>
-            I'm goal-oriented and focus on always improving, and my past in OT has given me many tools for solving problems.
-            Also an HTML newbie!
-            
-            
-            </p>
-
-            <!-- <p> I'm a gameplay programmer and ex occupational therapist(OT)! <br>
-                My favorite aspect about programming is learning new things. I'm always enthousiastic to try out new patterns and challenges.<br>
-                I find it important to communicate well, write efficient code, apply experience as you go and keep code organised.<br>
-                Due to my previous background in OT I've gotten good at finding flexible and creative solutions, and I love mixing these with the logics and efficiency of gameplay programming. 
-            </p> -->
-
-        </div>
-        <div class = "about-image">
-            <img src = "/HeyImSeppe/images/MePNG2.png" alt = "PictureOfMe">
-        </div>
-    </div>
-
-
-    <!--  MY WORK   -->
-    <h1 class = "sub-title">My Work</h1>
-
-    <div id="portfolio">
-        <div class ="container">
-            <div class = "projectList">
-
-                <a href = "/HeyImSeppe/footiefrenzy.html">
-                    <div class="project">
-                        <img src = "/HeyImSeppe/images/FootieFrenzy.jpg" alt = "FootieFrenzy">
-                        <div class="intro">
-                            <h1>Footie Frenzy</h1>
-                            <p><span>[GROUP PROJECT]</span> An intergalactic war fought through a soccer match!<br>
-                            Earth needs its mighty defenders as aliens try to take over earth with their oldest known method of inter-species invasion and extra-terrestrial entertainment...<br>
-                            Footie-Frenzy!<br>
-                            Play as either the invading Aliens or earths mightiest species: The Penguins.
-                            </p>
-                        </div>
-                    </div>
-                </a>    
-                
-                
-                <a href = "/HeyImSeppe/wavefunctioncollapse.html">
-                    <div class = "project">
-                        <img src = "/HeyImSeppe/images/WaveFunctionCollapse.png" alt ="WaveFunctionCollapse">
-                        <div class="intro">
-                            <h1>Wave Function Collapse</h1>
-                            <p><span>[SOLO RESEARCH]</span> Trying out and finding the benefits of the WFC algorithm</p>
-                        </div>
-                    </div>
-                </a>
-
-                <a href = "/HeyImSeppe/plundernpints.html">
-                    <div class = "project">
-                        <img src = "/HeyImSeppe/images/PlunderNPints.png" alt = "PlunderNPints">
-                        <div class="intro">
-                            <h1>Plunder 'n Pints</h1>
-                            <p><span>[GAME JAM]</span> Two players, one keyboard, zero rules</p>
-                        </div>
-                    </div>
-                </a>
-
-                <a href = "/HeyImSeppe/hookedontreasure.html">
-                    <div class = "project">
-                        <img src = "/HeyImSeppe/images/HookedOnTreasure.png" alt = "HookedOnTreasure">
-                        <div class="intro">
-                            <h1>Hooked On Treasure</h1>
-                            <p><span>[GROUP PROJECT]</span> An intergalactic war fought through a soccer match!</p>
-                        </div>
-                    </div>
-                </a>
-
-
-                <a href = "/HeyImSeppe/instancedrendering.html">
-                    <div class = "project">
-                        <img src = "/HeyImSeppe/images/InstancedCubes.png" alt = "VulkanInstancedRendering">
-                        <div class="intro">
-                            <h1>Vulcan instanced rendering</h1>
-                            <p><span>[SOLO PROJECT]</span> Instanced rendering done through the vulcan renderer, combineable with other pipelines</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-
-
-    </div>
-
-
-    <div class = "about-me">
-        <div class = "about-me-text">
-            <h2>About me and my journey</h2>
-            <p> Hi! I'm Seppe, a 26 year old Game Development student at Digital Arts and Entertainment. 
-                I'm a last year student who has also done a bachelor in Occupational Therapy before this.
-                <br>  <br>
-                I started doing Occupational Therapy because I'm passionate about helping people and love to apply anything I do in a creative way.
-                I've gotten experience being an OT mostly around the topics of Disabilities and Substance abuse. My years doing this have taught me invaluable skills such as teamwork, person/project based approach, flexible problem solving, and working independently.
-                
-                <br>  <br>
-                So why am I now a Gameplay Programmer? Well as much as I loved my job, I've had an itch to do more with maths and sciences. It's something I didn't need as much in my younger years but always had a passion for.
-                In a now or never moment of my life I decided to make a similar choice I made when choosing to study OT: do the creative application of my interests.
-                This brought me to Digital Arts and Entertainment!
-
-                <br>  <br>
-                For the last 3 years I've been adoring every step of the way. The math is new and challenging, but gives a great motivation to put work into learning it.
-                My problem solving skills help me tremendously in finding ways to fix problems and help me work on my projects.
-                You could say Programming has been my passion while at school, but it truely is the learning aspect and the cognitive challenge that has kept me happy to keep on pushing through with my decision.
-
-                <br>  <br>
-                To give a summary about myself: I love challenges and learning. I want to keep improving my programming skills and focus on code-cleanliness.
-                I thrive with teammates but also want responsibility for my own job.
-                <br>  <br>
-                If you want to know more about me or have any questions feel free to contact in the contact information at the footer of this page, or found in my resume!
-            
-                <br>  <br> BONUS: I love talking about literally any game or game-related topic so hit me up for that aswell!
-            </p>
-
-            <!-- <p> I'm a gameplay programmer and ex occupational therapist(OT)! <br>
-                My favorite aspect about programming is learning new things. I'm always enthousiastic to try out new patterns and challenges.<br>
-                I find it important to communicate well, write efficient code, apply experience as you go and keep code organised.<br>
-                Due to my previous background in OT I've gotten good at finding flexible and creative solutions, and I love mixing these with the logics and efficiency of gameplay programming. 
-            </p> -->
-
-        </div>
-
-    </div>
-</main>
-
-
 <footer id ="footer">
     <a class ="logo">Find me at:</a>
 
     <nav class ="navbar">
-        <a href ="/HeyImSeppe/index.html">LinkedIn</a>
-        <a href ="/HeyImSeppe/aboutMe.html">Github</a>
-        <a href="mailto:Seppedebaere@hotmail.com?">Seppedebaere@hotmail.com</a>
+        <a href ="https://www.linkedin.com/in/seppe-de-baere-50480128a/">LinkedIn</a>
+        <a href ="https://github.com/SeppeDeBa">Github</a>
+        <a href="mailto:Seppedebaere@hotmail.com">Seppedebaere@hotmail.com</a>
 
     </nav>
 
 </footer>
-
 </html>
-
-
-
-<!-- 
-TODOS:
-1. line-up about me start and end of page.
-2. Put keywords in bold
-3. Clarify sentences in end of page about me 
-4. fix links top right, no extra pages just jumps to right section
-5. lessen padding between: Hi I'm seppe // my work // projects
--->
