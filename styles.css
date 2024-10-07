@@ -318,6 +318,10 @@ body {
 }
 .projectPageDividerHorizontal video{
     width:55%;
+    height:max-content;
+}
+.projectPageDividerHorizontal video{
+    width:55%;
     height: max-content;
 }
 .projectInfo{
