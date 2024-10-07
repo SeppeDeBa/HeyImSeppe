@@ -55,6 +55,7 @@
                 In this project I made Vulkan pipelines for 2D, 3D and instanced 3D rendering.<br>
                 I talk about learning points and things I would tackle differently now such as putting instanced data in meshes instead of the pipeline, aswell as giving a short explanation on how the project works.
                 <br>
+                <br>
                 <strong>Why is this on my portfolio as a gameplay programmer?</strong><br>
                 It's because while I see myself as most skilled in gameplay programming, I do see myself as a versatile programmer who loves working on Graphics Programming and engine programming too!<br>
                 Workin on this project was a ton of fun and learning in general is something that motivates me.<br>
@@ -80,6 +81,7 @@
         <h3> A core necessity to make the pipelines work is to have different buffers.<br>
             This was done through a simple inheritance system.<br>
             <a href = "https://github.com/SeppeDeBa/Vulkan_Instanced_Rendering/blob/master/Project/GP2DataBuffer.h">Github Buffer</a><br>
+            <br>
             In similar fashion I worked out a base pipeline having a create, initialize, record, cleanup function, aswell as some getters.<br>
             From here on out I split it up in a 2D and 3D pipeline, and eventually my instanced pipeline.
             The key unique functionality of the instanced pipeline is the use of vectors of VertexInstances and InstanceBuffers, aswell as having multiple BindingDescriptions and AttributeDescriptions.<br>
