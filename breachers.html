@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seppe De Baere Portfolio website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+
+    <header class="header">
+        <a href="/HeyImSeppe/index.html" class ="logo">Seppe De Baere</a>
+    
+        <nav class ="navbar">
+            <a href ="/HeyImSeppe/index.html">Main</a>
+            <a href ="/HeyImSeppe/index.html#portfolio">Projects</a>
+            <a href ="/HeyImSeppe/index.html#about-Me">About Me</a>
+            <a href ="/HeyImSeppe/images/SeppeDeBaereResume.pdf" download>Download Resume</a>
+    
+        </nav>
+    </header>
+
+<div class= "projectPageContainer">
+    <div class= "projectPageDividerHorizontal">
+        <!-- <video width="1920">
+        <source src = "/HeyImSeppe/images/FFSnipped.mp4" type = "video/mp4">
+
+        </video> -->
+        <img src = "/HeyImSeppe/images/FootieFrenzy.jpg" alt = "FootieFrenzy">
+        <div class = "projectAboutInfoContainer">
+            <div class = "projectInfo">
+                <h1>Breachers</h1>
+                <h3><strong>Role:</strong></strong> Gameplay Programmer<br>
+                <strong>Size:</strong> 4 people<br>
+                <strong>Time span:</strong> 5 months<br>
+                <strong>Engine:</strong> UE 5
+                </h3>
+            </div>
+            <div class = "projectAbout">
+                <h1>About</h1>
+                <h3>An intergalactic war fought through a soccer match!<br>
+                    Earth needs its mighty defenders as aliens try to take over earth with their oldest known method of inter-species invasion and extra-terrestrial entertainment...<br>
+                   Footie-Frenzy!<br>
+                   Play as either the invading Aliens or earths mightiest species: The Penguins.
+                </h3>
+            </div>
+        </div>
+    </div>
+    <div class = "ProjectPageSubtitle">
+        <div class = "HighlightBox">
+        <h1> Short-form summary:</h1>
+        <h3>Throughout this project I worked on the main prototypes of the running, kicking and ability system, aswell as finishing the <strong>alien ability</strong>, and making a <strong>custom UI system for controllers</strong>.<br>
+        This project mainly taught me how important it is to <strong>plan out sprints</strong>, and stay in <strong>communication with artists and other colleagues</strong>.<br><br>
+        Code snippets can be asked for but will not all be shown here to avoid plagiarism as the project is owned by Howest to.
+        The project gave me tons of confidence in what I am capable of doing, and taught me how to <strong>program more methodically and slower</strong>, and putting a focus on refactor later instead of shotgun-program now.<br>
+        I've grown to love working in a group, and following a sprint-based schedule helped a lot with estimating time and giving myself more time to explore and hone my skills while working, while still focussing on a set goal.
+    <br> <br>   
+    </h3>
+    </div>
+        <h1>Introduction:</h1>
+        <h3> 
+            Footie Frenzy was a group project made by me, <a href = "https://www.nigelhuens.com/">Nigel Huens</a>(programmer), <a href = "https://www.artstation.com/szpika/albums/3655446">Alicja Pawelec</a>(technical artist) and <a href = "https://www.artstation.com/remi_pallemaerts">Remi Pallemaerts</a>(artist). <br>
+            In the period of 1 semester we had weekly meetings with 2 supervisors planning the prototyping, production and polish of this project.<br>
+            The purpose of this course was to focus on learning to work <strong>interdisciplinary</strong>, go through a <strong>full development cycle</strong>, and learn tools such as <strong>Perforce and HackNPlan</strong>. <br>
+        </h3>
+        <h1>My contributions:</h1>
+        <h2>Core movement, ball shooting, prototyping Unreal</h2> 
+        <h3>
+            One of my biggest roles was creating, testing and tweaking the core movement and kicking system for the game, aswell as prototyping the ability system.<br>
+            I started with testing some values in blueprints, after which I remade them with C++ code. It was important to look deeply into the documentation of UE5 to get the perfect feeling for the 2 types of kicking and the ball physics.<br>
+            It was important to me to make the ability and character systems usage <strong>expandable and reusable</strong> in case we ever want to add more species to the game.<br>
+        </h3>
+        <br>
+        <img src = "/HeyImSeppe/images/FFBaseChar.png" alt = "baseCharCode" width = 60%>
+        <br>
+        <h2>Custom controller compatible UI:</h2>
+        <h3>The built in UI system for Controllers was deeply failing us, which gave me the <strong>opportunity to dive deeper into the c++ side of UE5 UI.</strong><br>
+            I inherited from some base UI elements and combined them with a self made own UI controller, allowing navigation between different elements made by us.<br>
+            Something extremely important throughout this whole element was to make it <strong>easy to use for artists</strong>, which applied to other aspects of the project such as the looks of abilities(example: showing and dissapearing of UFO).
+            This also gave me the chance to look into how Unreal registers controller input and switching their modes between gameplay and UI, aswell as implementing UI only inputMethods to the UI.
+            It was really cool to build this up and could be a further project as I would like to see how the process is to make a UE5 plugin.
+            <br>
+            Something I'm quite proud of is making UI functionally modular, having some UI that are bases for, as an example, loading/quitting menu's. These can simply be inherited from and will be implemented already and very controlable by the artists.<br>
+            Underneath you can see a screenshot of the overload of the keyDown, using a keyEvent to check what buttons are pressed and having the NavigationController move to the linked navigation element.<br>
+            <br>
+            <img src = "/HeyImSeppe/images/FFInputManager.png" alt = "input manager example png" width = 60%>
+            <br>
+        </h3>
+        <br>
+        <h2>Post goal, Animation implementation and more</h2>
+        <h3>Besides these specific topics there were a lot more opportunities where I got to work closely with the technical artist to make animations transition smoothly, have more UI pop up on for example goals, and make the game clearer for players.
+        Penguins and aliens had the same application of making a system that can easily be added on for their UI, animations and particles.<br>
+        I also love being a part of the <strong>creative process</strong> and I find it important to be critical about the game, whether its fun, and improve teamwork.
+        </h3>
+        <h1>What did I learn?</h1>
+        <h3><strong>1. it's important to think about how artists will use my code and work on the game.</strong><br>
+            &ensp; An example would be to not take control over specific meshes to show up or be hidden, but instead work with an object root system so that the artist can always add/remove things like particles, effects and additional meshes as they please.<br>
+            <br><strong>2. Documentation is awesome!</strong><br>
+            &ensp; This was my first project using C++ in Unreal, and the documantation can be hard to find sometimes... However it was very fun to try out new things while working on this project. New engines are always fun to learn, and this really showed me both how much you can keep learning an engine, aswell as how I would change certain aspects of the engine if it was my own.<br>
+            <br><strong>3. Knowing what colleagues are doing is the key to a great project.</strong><br>
+            &ensp; Using HackNPlan has shown me how great it is to plan out a whole production sprint. We had very minimal task blocking as we could work parallel with the artists. Whenever we worked on for example the characters, we could constantly ask them what they need/want. This in turn allowed us to know how to implement things they needed, and more importantly allowed us to communicate on the structure and needs of the topic at hand.<br>
+            <br><strong> 4. Break down complex problems into smaller tasks.</strong><br>
+            &ensp; Running into problems such as the UI showed me to not try too much "shotgun programming".<br>
+            I learned to <strong>be more confident in what I can do, which in turn taught me to work smarter when doing it.</strong><br>
+            Normally I would try out changings aspects of the code and seeing what works based on my programming knowledge. In this project it was however a great insight to talk to the programming supervisor aswell as my fellow programmer.<br>
+            Relaying how code works and documenting it was of immense value for eachother.
+            This allowed me to also to plan out how I'd make systems expandable and reusable, and refactor after getting feedback from my peers and supervisor.<br>
+        </h3>
+        <h1>Relevant Links</h1>
+        <h3>
+            - <a href = "https://rpallemaerts.itch.io/footie-frenzy-inter-species-invasion">Itch.io </a><br> 
+            - <a href = "https://youtu.be/FBEHT0ulfVU?si=UX5-ifZWBYrlTr2V">Youtube trailer </a><br>
+            - No code snippets or git link as the project is technically owned by HOWEST. Further inquiries and looking into the code can be asked for!
+        </h3>
+    </div>
+
+
+</div>
+
+
+
+</body>
+<footer id ="footer">
+    <a class ="logo">Find me at:</a>
+
+    <nav class ="navbar">
+        <a href ="https://www.linkedin.com/in/seppe-de-baere-50480128a/">LinkedIn</a>
+        <a href ="https://github.com/SeppeDeBa">Github</a>
+        <a href="mailto:Seppedebaere@hotmail.com">Seppedebaere@hotmail.com</a>
+
+    </nav>
+
+</footer>
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seppe De Baere Portfolio website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+
+<header class="header">
+    <a href="/HeyImSeppe/index.html" class ="logo">Seppe De Baere</a>
+
+    <nav class ="navbar">
+        <a href ="/HeyImSeppe/index.html">Main</a>
+        <a href ="/HeyImSeppe/aboutMe.html">About me</a>
+        <a href ="/HeyImSeppe/projects.html">Projects</a>
+        <a href ="/HeyImSeppe/images/CVSeppeDeBaere.pdf" download>Download Resume</a>
+
+    </nav>
+</header>
+
+<div class= "projectPageContainer">
+    <div class= "projectPageDividerHorizontal">
+
+        <img src = "/HeyImSeppe/images/FootieFrenzy.jpg" alt = "FootieFrenzy">
+        <div class = "projectAbout">
+            <h1>About</h1>
+            <h3>An intergalactic war fought through a soccer match!<br>
+                Earth needs its mighty defenders as aliens try to take over earth with their oldest known method of inter-species invasion and extra-terrestrial entertainment...<br>
+               Footie-Frenzy!<br>
+               Play as either the invading Aliens or earths mightiest species: The Penguins.
+            </h3>
+        </div>
+    </div>
+    <div class = "projectAboutInfoContainer">
+        <div class = "projectInfo">
+            <h1>Project Info</h1>
+            <h3>Role: Gameplay Programmer<br>
+            Size: 4 people<br>
+            Time span: 5 months<br>
+            Engine: UE 5
+            </h3>
+        </div>
+        <div class = "projectAbout">
+            <h1>About</h1>
+            <h3>An intergalactic war fought through a soccer match!<br>
+                Earth needs its mighty defenders as aliens try to take over earth with their oldest known method of inter-species invasion and extra-terrestrial entertainment...<br>
+               Footie-Frenzy!<br>
+               Play as either the invading Aliens or earths mightiest species: The Penguins.
+            </h3>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+</html> -->
