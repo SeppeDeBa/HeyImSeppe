@@ -30,11 +30,11 @@
         <source src = "/HeyImSeppe/images/FFSnipped.mp4" type = "video/mp4">
 
         </video> -->
-        <img src = "/HeyImSeppe/images/FootieFrenzy.jpg" alt = "FootieFrenzy">
+        <img src = "/HeyImSeppe/images/Breachers.jpg" alt = "Breachers">
         <div class = "projectAboutInfoContainer">
             <div class = "projectInfo">
                 <h1>Breachers</h1>
-                <h3><strong>Role:</strong></strong> Gameplay Programmer<br>
+                <h3><strong>Role:</strong></strong> Gameplay + System Programmer<br>
                 <strong>Size:</strong> 4 people<br>
                 <strong>Time span:</strong> 4 months<br>
                 <strong>Engine:</strong> Unity 6
@@ -42,10 +42,8 @@
             </div>
             <div class = "projectAbout">
                 <h1>About</h1>
-                <h3>An intergalactic war fought through a soccer match!<br>
-                    Earth needs its mighty defenders as aliens try to take over earth with their oldest known method of inter-species invasion and extra-terrestrial entertainment...<br>
-                   Footie-Frenzy!<br>
-                   Play as either the invading Aliens or earths mightiest species: The Penguins.
+                <h3>A tactical team-based VR shoorter.<br>
+                    A VR shooter featuring vaulting, climbing, rappelling and strategic teamplay. In 5v5 matches players use a mix of guns and gadgets to outsmart and outplan the opponents.<br>
                 </h3>
             </div>
         </div>
@@ -53,68 +51,170 @@
     <div class = "ProjectPageSubtitle">
         <div class = "HighlightBox">
         <h1> Short-form summary:</h1>
-        <h3>Throughout this project I worked on the main prototypes of the running, kicking and ability system, aswell as finishing the <strong>alien ability</strong>, and making a <strong>custom UI system for controllers</strong>.<br>
-        This project mainly taught me how important it is to <strong>plan out sprints</strong>, and stay in <strong>communication with artists and other colleagues</strong>.<br><br>
-        Code snippets can be asked for but will not all be shown here to avoid plagiarism as the project is owned by Howest to.
-        The project gave me tons of confidence in what I am capable of doing, and taught me how to <strong>program more methodically and slower</strong>, and putting a focus on refactor later instead of shotgun-program now.<br>
-        I've grown to love working in a group, and following a sprint-based schedule helped a lot with estimating time and giving myself more time to explore and hone my skills while working, while still focussing on a set goal.
-    <br> <br>   
-    </h3>
+        <h3> My follow up project at <a href = "https://www.triangle-factory.be/">Triangle Factory</a> after Hyper Dash<br>
+           Packed with knowledge about the company and our systems, I got to tackle a whole new and larger codebase.<br>
+           My favourite experience was the sleeker and more defined standards and naming. An example is having a tighter naming convention surrounding networked values and them being state/client auth, which HD did not have.<br>
+           Some of my core contributions feature:<br>
+           - Many bugfixes for guns, player interactions, ui interactions<br>
+           - A <strong>brand-new gadget</strong>: The C4<br>
+           - <strong>Throwing trajectory</strong> system, used for reworked grenade death recap (small but cool)<br>
+           - Rework on <strong>networked</strong> functionalities<br>
+           <br><br>
+        </h3>
     </div>
         <h1>Introduction:</h1>
         <h3> 
-            Footie Frenzy was a group project made by me, <a href = "https://www.nigelhuens.com/">Nigel Huens</a>(programmer), <a href = "https://www.artstation.com/szpika/albums/3655446">Alicja Pawelec</a>(technical artist) and <a href = "https://www.artstation.com/remi_pallemaerts">Remi Pallemaerts</a>(artist). <br>
-            In the period of 1 semester we had weekly meetings with 2 supervisors planning the prototyping, production and polish of this project.<br>
-            The purpose of this course was to focus on learning to work <strong>interdisciplinary</strong>, go through a <strong>full development cycle</strong>, and learn tools such as <strong>Perforce and HackNPlan</strong>. <br>
-        </h3>
+           Breachers is a succesful VR shooter game by Triangle Factory.<br>
+           It features bomb plant/defusal as it's main gamemode but also has a team-deathmatch and elimination mode.<br>
+           The core gameplay loop uses a variation of guns ranging from pistols to heavy rifles. They're supported by gadgests such as grenades, drones, breaching foam, clone projectors and more.<br>
+           Actions in the game earn the player money which they can spend on these tools, as well as add attachments to guns.<br>
+           Entering the project, I could immediately notice that the codebase was bigger, but more readable and understandable than HD. 
+           While I did have a lot of experience with that project, the simple differences of stricter naming and general structure of the project made it easy to navigate. I do think my experience as a programmer over the last months helped a ton as well!<br>
+            <br>
+            I got to work on this project from June - September.<br>
+            <br>
+
         <h1>My contributions:</h1>
-        <h2>Core movement, ball shooting, prototyping Unreal</h2> 
+        <h2>Developing a new gadget: The C4</h2> 
+                <h3>
+            <img src = "/HeyImSeppe/images/c4wall.png" alt = "C4 png" width = 100%>
+        </h3>
         <h3>
-            One of my biggest roles was creating, testing and tweaking the core movement and kicking system for the game, aswell as prototyping the ability system.<br>
-            I started with testing some values in blueprints, after which I remade them with C++ code. It was important to look deeply into the documentation of UE5 to get the perfect feeling for the 2 types of kicking and the ball physics.<br>
-            It was important to me to make the ability and character systems usage <strong>expandable and reusable</strong> in case we ever want to add more species to the game.<br>
+            The C4 was my first big task where I got the creative liberty to prototype and work on a throwable C4.<br>
+            Although it might sound simple it had a lot of features and challenges to it!<br>
+            <br>
+            <strong>Challenge 1:</strong><br>
+            The C4 is a <strong>gadget attached to a gadget</strong>.<br>
+            This caused a lot of hickups with the lerping of positions and parenting of one gadget to another.<br>
+            It's never been done, but it was an amazing opportunity to delve into the networking of Breachers opposed to Hyper-Dash.<br>
+            It uses a newer version of the package and has a very different implementation and way more features.<br>
+            <br>
+            I've gotten a much deeper insight on networked order execution, optimisations surrounding it, and how to save and lerp data over a network.<br>
+            It was a challenge to get both the parented movement of the two gadgets working well, but also <strong>having it stick properly on the wall</strong>.<br>
+            I used a combination of its hitbox and then projecting its touchpoint on a plane compared to the wall, to have it rotated and placed nicely.<br>
         </h3>
         <br>
-        <img src = "/HeyImSeppe/images/FFBaseChar.png" alt = "baseCharCode" width = 60%>
-        <br>
-        <h2>Custom controller compatible UI:</h2>
-        <h3>The built in UI system for Controllers was deeply failing us, which gave me the <strong>opportunity to dive deeper into the c++ side of UE5 UI.</strong><br>
-            I inherited from some base UI elements and combined them with a self made own UI controller, allowing navigation between different elements made by us.<br>
-            Something extremely important throughout this whole element was to make it <strong>easy to use for artists</strong>, which applied to other aspects of the project such as the looks of abilities(example: showing and dissapearing of UFO).
-            This also gave me the chance to look into how Unreal registers controller input and switching their modes between gameplay and UI, aswell as implementing UI only inputMethods to the UI.
-            It was really cool to build this up and could be a further project as I would like to see how the process is to make a UE5 plugin.
-            <br>
-            Something I'm quite proud of is making UI functionally modular, having some UI that are bases for, as an example, loading/quitting menu's. These can simply be inherited from and will be implemented already and very controlable by the artists.<br>
-            Underneath you can see a screenshot of the overload of the keyDown, using a keyEvent to check what buttons are pressed and having the NavigationController move to the linked navigation element.<br>
-            <br>
-            <img src = "/HeyImSeppe/images/FFInputManager.png" alt = "input manager example png" width = 60%>
-            <br>
+
+
+        <!-- IN HOUSE TOOLS -->
+        <h1>In-house tooling and feedback loop</h1>
+        <h3>
+            <img src = "/HeyImSeppe/images/Tool.png" alt = "interactables Tool png" width = 100%>
         </h3>
         <br>
-        <h2>Post goal, Animation implementation and more</h2>
-        <h3>Besides these specific topics there were a lot more opportunities where I got to work closely with the technical artist to make animations transition smoothly, have more UI pop up on for example goals, and make the game clearer for players.
-        Penguins and aliens had the same application of making a system that can easily be added on for their UI, animations and particles.<br>
-        I also love being a part of the <strong>creative process</strong> and I find it important to be critical about the game, whether its fun, and improve teamwork.
+        <h3> I had the opportunity to improve an in-house tool that was used to display some of the skins in the game.<br>
+            My ticket was to:<br>
+            - <strong>Add interactivity to our display tool</strong> for skins to assign visual overrides through custom muzzle flashes and SFX<br>
+            - Add buttons with popups and text fields that create layered folders with proper naming conventions to have the new system easily premade setup for artists.<br>
+            - Apply a constant feedback loop and iterate on the tool and its new features.<br>
+            <br>
+            The most important thing I'd take away from this is that tools and their documentation need to be made with its target userbase in mind.<br>
+            Artists loved visual details and info so throughout the process I learned to adapt documenting in a style that uses a lot of colors and icons, minimizing the use of text.<br>
+            The parts for programmers could be more to the point and with longer texts. The most important thing to take into account was to constantly do a feedback loop and ask them to test it during the process.<br>
+            I gained a lot of experience using Unity's C# side of its custom UI and how it manages its assets.<br>
         </h3>
+
+
+        <!-- INTERACTABLES -->
+
+        <h1>The Interactables,  My first Herculean task in my programming career</h1>
+        <h3>
+            <img src = "/HeyImSeppe/images/interactables.png" alt = "interactables example png" width = 100%>
+            <br>
+        </h3>
+        <h2>Prototyping</h2>
+        <h3>Starting on this task I was assigned to make a first prototype of interactables/toys. These are 1 and 2 handed instruments and playthings that can be swapped to from weapons.<br>
+            I made an action plan with some key features that should be focused on:<br>
+            1. <strong>Weapons are picked up, never actively swapped to</strong>. We don't have a menu or a system to stow weapons and take them out<br> 
+            2. <strong>HD does not have a 2 handed system</strong> and some interactables needed this<br>
+            3. <strong>Networking</strong> in HD uses an older system that nobody has worked with in recent years, forcing me to do this mostly alone, with guidance on principles of networking and not on application<br>
+            <br>
+            All three are quite big and a lot of responsibility but I loved the challenge. I'll go over the process in the following sections.<br>
+            <br>
+            Regarding prototyping itself, the biggest thing I learned is to iterate fast and its okay if it doesnt work immediately.<br>
+            I'm too perfectionistic and want too many things at once. I needed to subdivide my own tasks and goals, and test every step of the way.<br>
+        </h3>
+        <br>
+
+        <h2>The Interactables Manager and the usefulness of patterns</h2>
+        <h3> My first big step after testing some instruments and getting the greenlight was making a core system that could swap instruments and support them in-game, using menus, over the network.<br>
+            <br>
+            An interesting pattern I applied was to use <strong>Dependency Injection</strong>.<br>
+            The system needed to work online and offline, where one interacts server-authorative to prevent the useage of unowned interactables through cheats.<br>
+            I created a manager that can take the general input of a player and sent it to a base version of the interactables manager.<br>
+            The online version did various <strong>safety checks</strong>, used <strong>networked variables</strong> as efficiently as possible and kept the actions of the interactables <strong>server-authorative</strong>.<br>
+            The local version would have its own set of variables and could just blindly use them as it was only used in single-player and for previewing in the menu (also a new system with guns getting this feature too).<br>
+            <br>
+            The most important achievement here was to <strong>fully remove the networking dependency of interactables</strong>. Edge casese were properly handled and only the manager had to know what had to be sent and received. This allowed for fast iteration of all the new interactables and a sustainable system<br>
+            It was a big challenge to set up a system so large, having to take into account many things such as making weapons stow away and being able to be put back, having a generic enough base interactable to support instruments, confetti guns, and still have it be expandable for the future.<br>
+            The most important thing I learned in this part of the project is <strong>how to apply patterns, and keep it expandable</strong>. I've done these things in uni, but of course it's different if the system has to interact with so many other systems.<br>
+            It was <strong>important to draw and map out the classes</strong> before making them to run into a minimal amount of problems, and to constantly <strong>communicate the state of how its going to my lead</strong>, good or bad.<br> 
+            <br>
+        </h3>
+
+        <h2>Networking, legacy code and the love to learn</h2>
+        <h3> Networking was definitely one of the biggest challenges.<br>
+            We didn't get taught anything networking related at Uni, so I was unsure about how its applied, and its good practices.<br>
+            <strong>The thing that will stay with me the most is that I calculated time to learn into the ticket's total estimation.</strong><br>
+            I had to learn both the basics and nuances of server vs state authority, how to minimalize and package networked data, how to do server-side checks, and much more.<br>
+            It was amazing to have a codebase with some networking implemented, but there were basically no colleagues who remembered how to interact with the networking system in HD.<br>
+            I took a day to plow through the documentation of Bolt, made notes about our own implementations and habits in networked code, and went over these with my lead.<br>
+            <br>
+            <strong>I could build up expertise.</strong><br>
+            I was already the sole person working on this large ticket, and at the point networking was done, I was both the expert on the system and networking as a whole in HD.<br>
+            It gave me pride and confidence, and I got the chance to involve my other fellow interns in the project.<br>
+            While I could tweak the system to the new things we needed, I could tutor them on the networking so they could apply it on their own, and assign them to the interactables themselves, continuing on my prototypes.<br>
+            <br>       
+        </h3>
+
+        <br>
+        <h2>The weight of responsibility, the good and the bad</h2>
+        <h3>A very important topic I want to talk about is responsibility.<br>
+            I had the chance to somewhat <strong>work like a lead</strong> in this part of the project which taught me an enormous amount.<br>
+            It pushed me to learn how to truly subdivide tasks in the most optimal way. Not just for myself but also for other people.<br>
+            My insights on building larger systems from scratch and how the pipeline for that should go was something I could only theorize about before, but I got to experience both the start of the project and the inclusion of others.<br>
+            I've always been proud of my work and try my hardest, but I was pushed to my limit here in a very positive way. I got the space to experiment and improve, while getting guidance on deadlines and aiming for goals.<br>
+            <br>
+            However, the thing that will stay with me the most is the pressure it brings to the table.<br>
+            I love the workflow at Triangle, theres solid sprints being set up, and you're being guided through it... but this was definitely a tough period as a programmer.<br>
+            I had no direct colleagues for a while, worked on this ticket that was taking up weeks, but I was making good progress.<br>
+            Delving back into my past as an Occupational Therapist, I got to self reflect a lot and set up a different work-ethic and mentality for myself. I had to realise that it would take a while as big projects do, but I also had to step up and talk about any problems that came up.<br>
+            It changed me as a programmer as I started realising that problems in a project are natural. They're not necessarily my fault, but they are my responsibility.<br>
+            I developed a stronger resistance to work stress, and got a more realistic outlook. We handle problems as they come and avoid them by preparing.<br>
+            Plan, Communicate, Plan, Continue is my new motto and even though I'm alone on a big ticket, I'm not alone in sharing ideas and implementations.<br> 
+            <br>
+            There's also some important pitfalls here to note! I wasn't included in a lot of meetings which felt very frustrating as I was the sole programmer on this project. Expectations were sometimes mismatch with how communication was interpreted, and plans had to shift dates sometimes.<br>
+            If I'd be in this situation again I'd voice my problems stronger and try to put my foot down more. It's very hard to do as an intern, but it's important both for the project and me as an employee.<br>
+        </h3>
+        <br>
         <h1>What did I learn?</h1>
-        <h3><strong>1. it's important to think about how artists will use my code and work on the game.</strong><br>
-            &ensp; An example would be to not take control over specific meshes to show up or be hidden, but instead work with an object root system so that the artist can always add/remove things like particles, effects and additional meshes as they please.<br>
-            <br><strong>2. Documentation is awesome!</strong><br>
-            &ensp; This was my first project using C++ in Unreal, and the documantation can be hard to find sometimes... However it was very fun to try out new things while working on this project. New engines are always fun to learn, and this really showed me both how much you can keep learning an engine, aswell as how I would change certain aspects of the engine if it was my own.<br>
-            <br><strong>3. Knowing what colleagues are doing is the key to a great project.</strong><br>
-            &ensp; Using HackNPlan has shown me how great it is to plan out a whole production sprint. We had very minimal task blocking as we could work parallel with the artists. Whenever we worked on for example the characters, we could constantly ask them what they need/want. This in turn allowed us to know how to implement things they needed, and more importantly allowed us to communicate on the structure and needs of the topic at hand.<br>
-            <br><strong> 4. Break down complex problems into smaller tasks.</strong><br>
-            &ensp; Running into problems such as the UI showed me to not try too much "shotgun programming".<br>
-            I learned to <strong>be more confident in what I can do, which in turn taught me to work smarter when doing it.</strong><br>
-            Normally I would try out changings aspects of the code and seeing what works based on my programming knowledge. In this project it was however a great insight to talk to the programming supervisor aswell as my fellow programmer.<br>
-            Relaying how code works and documenting it was of immense value for eachother.
-            This allowed me to also to plan out how I'd make systems expandable and reusable, and refactor after getting feedback from my peers and supervisor.<br>
+        <h2>Personal</h2>
+        <h3><strong>1. Working in a team is a humongous strength, and communication is the tool to make it the strongest it can be</strong><br>
+            &ensp; The codebase could sometimes be messy and not everyone knew about everything in the project, but you could (and should) still always ask for help and guidance. Leads and seniors are there to guide, but do put in suficient work before you ask.<br>
+            <strong>2. Think end-goal related</strong><br>
+            &ensp; This is something I still try to work on. I need to get to a finished ticket, and sometimes corners have to be cut. There's a realistic time-frame for it to be done in, and not everything can always be done.<br>
+            <strong>3. Having a strong voice is good</strong><br>
+            &ensp; As a programmer, junior or senior, you're there to give opinions and thoughts. You won't get shot in the street for speaking up, it's expected. I've grown stronger and have less fear in talking up and voicing thoughts. Systems can sometimes change, and implementations can be (sub)optimal, and the space needs to be safe to discuss these things.<br>
+            <strong> 4. Applying my people skills in a lead-like role</strong><br>
+            &ensp; I've got a lot of experiences in different teams, but it's my first time assigning tasks to others and making the calls. My future goal will always be to become a lead in a project when I'm ready for it, but it was reassuring to having experience with the responsibilities in this role and it's given me confidence in myself as a person!<br>
         </h3>
+<br>
+        <h2>Practical</h2>
+        <h3><strong>1. Networking</strong><br>
+            &ensp; Something I got to somewhat specialize in in both this project and Breachers. I'm very happy to have been able to delve into it myself as it's taught me how to tackle learning these big new things.<br>
+            <strong>2. Delving deeper into patterns</strong><br>
+            &ensp; Patterns were something we often used in Uni, and I've used it in personal projects as well. There were however so many ways to approach the interactables system, and I wanted it to be a pragmatic choice. Research is important even if patterns seem well-fit for the job, and <br>
+            <strong>3. Getting a strong understanding </strong><br>
+            &ensp; HD gave me the chance to hone a lot of basic skills and using a ton of programs to a solid level for future endeavors. An example is GIT, I could aways use it but now I've gotten confident in how I should use it and a deeper practical understanding on how to get the most out of it.<br>
+            <strong> 4. Learning how to make in-house tools for Unity</strong><br>
+            &ensp; Making in-engine tools was an awesome experience and something I could consider doing as my main focus as a programmer! It's got a lot of considerations in small decisions and being goal-oriented, which is something I keep striving to get better at.<br>
+        </h3>
+
         <h1>Relevant Links</h1>
         <h3>
-            - <a href = "https://rpallemaerts.itch.io/footie-frenzy-inter-species-invasion">Itch.io </a><br> 
-            - <a href = "https://youtu.be/FBEHT0ulfVU?si=UX5-ifZWBYrlTr2V">Youtube trailer </a><br>
-            - No code snippets or git link as the project is technically owned by HOWEST. Further inquiries and looking into the code can be asked for!
+            - <a href = "https://store.steampowered.com/app/1386890/Hyper_Dash/">Hyper Dash Steam </a><br> 
+            - <a href = "https://www.triangle-factory.be/">Triangle Factory Website </a><br>
+            - No direct code snippets as I'm under NDA. Do feel free to ask me about general implementations regarding these topics and any coding related questions are of course also welcome!!!<br>
         </h3>
     </div>
 
@@ -136,6 +236,7 @@
 
 </footer>
 </html>
+
 
 
 
