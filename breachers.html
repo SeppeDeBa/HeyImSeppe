@@ -53,7 +53,8 @@
         <h1> Short-form summary:</h1>
         <h3> My follow up project at <a href = "https://www.triangle-factory.be/">Triangle Factory</a> after Hyper Dash<br>
            Packed with knowledge about the company and our systems, I got to tackle a whole new and larger codebase.<br>
-           My favourite experience was the sleeker and more defined standards and naming. An example is having a tighter naming convention surrounding networked values and them being state/client auth, which HD did not have.<br>
+           My favourite experience was the sleeker and more defined standards and naming.<br>
+           An example is having a tighter naming convention surrounding networked values and them being state/client auth, which HD did not have.<br>
            Some of my core contributions feature:<br>
            - Many bugfixes for guns, player interactions, ui interactions<br>
            - A <strong>brand-new gadget</strong>: The C4<br>
@@ -66,13 +67,14 @@
         <h3> 
            Breachers is a succesful VR shooter game by Triangle Factory.<br>
            It features bomb plant/defusal as it's main gamemode but also has a team-deathmatch and elimination mode.<br>
-           The core gameplay loop uses a variation of guns ranging from pistols to heavy rifles. They're supported by gadgests such as grenades, drones, breaching foam, clone projectors and more.<br>
+           The core gameplay loop uses a variation of <strong>guns</strong> ranging from pistols to heavy rifles. They're supported by <strong>gadgets</strong> such as grenades, drones, breaching foam, clone projectors and more.<br>
            Actions in the game earn the player money which they can spend on these tools, as well as add attachments to guns.<br>
+           <br>
            Entering the project, I could immediately notice that the codebase was bigger, but more readable and understandable than HD. 
            While I did have a lot of experience with that project, the simple differences of stricter naming and general structure of the project made it easy to navigate. I do think my experience as a programmer over the last months helped a ton as well!<br>
-            <br>
-            I got to work on this project from June - September.<br>
-            <br>
+           <br>
+           I got to work on this project from June - September.<br>
+           <br>
 
         <h1>My contributions:</h1>
         <h2>Developing a new gadget: The C4</h2> 
@@ -83,15 +85,55 @@
             The C4 was my first big task where I got the creative liberty to prototype and work on a throwable C4.<br>
             Although it might sound simple it had a lot of features and challenges to it!<br>
             <br>
-            <strong>Challenge 1:</strong><br>
+            <strong>Challenge 1: gadget-on-gadget</strong><br>
             The C4 is a <strong>gadget attached to a gadget</strong>.<br>
             This caused a lot of hickups with the lerping of positions and parenting of one gadget to another.<br>
             It's never been done, but it was an amazing opportunity to delve into the networking of Breachers opposed to Hyper-Dash.<br>
             It uses a newer version of the package and has a very different implementation and way more features.<br>
             <br>
-            I've gotten a much deeper insight on networked order execution, optimisations surrounding it, and how to save and lerp data over a network.<br>
+            I've gotten a <strong>much deeper insight on networked order execution, optimisations, and lerping data with its networked side</strong>.<br>
+            Having prediction work properly while slowly going to the requested throw from the server was important as it does have to feel smooth for both parts of the gadget.<br>
             It was a challenge to get both the parented movement of the two gadgets working well, but also <strong>having it stick properly on the wall</strong>.<br>
             I used a combination of its hitbox and then projecting its touchpoint on a plane compared to the wall, to have it rotated and placed nicely.<br>
+            <br>
+            <strong>Challenge 2: equipmentSlots</strong><br>
+            The second challenge to tackle was to have a nice visual for the detonateable brick to slot onto the detonator.<br>
+            We already have equipment slots on the body, which I thought could be reused nicely.<br>
+             <strong>Confidence and experience helped me a long way here!</strong> These equipmentslots were deeply rooted into the character, grabbing and slotting code for gadgets and weapons.<br>
+             I had done similar tasks on HD on a smaller scale, but I <strong>abstracted the class</strong> to its base functionalities and <strong>split it up into a normal equipmentSlot and a gadgetSubslot</strong>.<br>
+             Applying the networked side went fast as I already had experience with it from before, and the smaller tickets I worked on before helped a ton with already understanding the grabbing and slotting code.<br>
+            
+            <br>
+            <strong>Challenge 3: Complexity of the smaller aspects</strong><br>
+            One of the things I tried working on more is <strong> overthinking the smaller things</strong>.<br>
+            Something I had to pull myself back on was the picking up system. By default we can set pickups per team or mode.<br>
+            For this there was some complexity in who can pick up the detonator and the brick, or together.<br>
+            I used previous experience to <strong>write down the logics on pen-and-paper</strong>.<br> 
+            To spare you the web there were a ton of conditions and triggers that would(n't) allow you to pick up either, and visualising it before doing it helped in finding similarities and making a state-machine like diagram.<br>            
+            An extra part of the challenge was reusing our UI system to add a new type of icon to indicate where the brick is when holding the detonator, as well as indicating its armed state for teamplay.<br>
+        </h3>
+
+            <h2>A smaller task with many insights: The throwing-arc</h2> 
+        <h3>
+            My ticket was to include a thrown line into the death-recap of the grenade.<br>
+            Immediately a few ideas came up in my head:<br>
+            1. Make it <strong>reuseable</strong><br>
+            2. <strong>Minimalize and customize points</strong> used in the arc<br>
+            3. Take into account the <strong>network-authorative throw</strong>, not the locally predicted one<br>
+            <br>
+            In the end I managed to lower the points sent through the network to +- 2-20 points.<br>
+            When touching new colliders and having certain minimum changes in velocity I take note of their location and velocity on server.<br>
+            Then I do a recreation of these points on client-side, using the dot product between the object and its target, and the velocity's direction to see if its passed its target.<br>
+            <br>
+            <strong>What's important is how I learned to tackle this task efficiently and optimally</strong>.<br>
+            After finishing a good version of the ticket, I reworked it and <strong>abstracted it to its core useages</strong> and changed the grenades code to being <strong>reuseable static functions</strong>.<br>
+            It's now a .cs file with functions that can calculate trajectories in various ways, and it can output these with customiseable aspects. (eg. points output in total vs points per x time passed)<br>
+            An elegant implementation that is now fully disconnected from the grenades, and in its core only tens of lines.<br>
+            However, <strong>the math is well-thought out, the functions are useable in many situations, and I still kept in mind general coding standards and practices</strong> for smaller choices (an example is overloading vs different functions).<br>
+        </h3>
+        <h2>Building expertise in Networking</h2> 
+        <h3>
+            
         </h3>
         <br>
 
